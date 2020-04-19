@@ -17,6 +17,7 @@ body {
     background-size: cover;
 
     height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
     padding: 1.2em;
 
     box-sizing: border-box;
