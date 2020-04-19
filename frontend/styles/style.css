@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap');
+
+:root {
+    --light: #efedea;
+    --dark: #212121;
+  }
+
+body {
+    font-family: 'DM Sans', sans-serif;
+
+    padding: 0;
+    margin: 0;
+}
+
+.intro {
+    background-image: url('../images/gradient.png');
+    background-size: cover;
+
+    height: 100vh;
+    padding: 1.2em;
+
+    box-sizing: border-box;
+}
+
+h1 {
+    text-transform: uppercase;
+    margin: 0.8em 0;
+    font-size: 8vh;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.11;
+    letter-spacing: 1.88px;
+    color: var(--dark);
+}
+
+p {
+    font-size: 3vh;
+    line-height: 1.33;
+    letter-spacing: 0.2px;
+    color: #000000;
+}
