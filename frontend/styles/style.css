@@ -22,6 +22,11 @@ body {
     box-sizing: border-box;
 }
 
+.intro-content {
+    max-width: 800px;
+    margin: auto;
+}
+
 h1 {
     text-transform: uppercase;
     margin: 0.8em 0;
