@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "preinstall": "cd frontend && npm install",
+    "start": "cd frontend && npm run start",
     "build": "cd frontend && npm run build && mv dist/ ../dist/"
   },
   "author": "",
