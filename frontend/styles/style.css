@@ -18,7 +18,7 @@ body {
 
     height: 100vh;
     height: calc(var(--vh, 1vh) * 100);
-    padding: 1.2em;
+    padding: 1.4em;
 
     box-sizing: border-box;
 }
@@ -43,6 +43,65 @@ h1 {
 p {
     font-size: 3vh;
     line-height: 1.33;
-    letter-spacing: 0.2px;
+    letter-spacing: 0.4px;
     color: #000000;
+}
+
+.landing2 {
+
+    background-color: #e8e8e8;
+
+    height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
+    padding: 1.4em;
+
+    box-sizing: border-box;
+}
+
+.landing2-content {
+    max-width: 800px;
+    height: 100%;
+    margin: auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.landing2-content p {
+    font-size: 1em;
+}
+.landing2-content span.title {
+    font-size: 1.1em;
+    letter-spacing: 2.5px;
+    color: #000000;
+}
+
+.landing2-content .bottom {
+    text-align: center;
+    margin: 1em auto;
+    max-width: 400px;
+    width: 100%;
+}
+
+button {
+    display: block;
+
+    border-radius: 10px;
+    border: solid 2px var(--dark);
+
+    padding: 0.8em 1.5em;
+    margin: auto;
+    width: 100%;
+
+    font-size: 1em;
+    font-weight: bold;
+
+    background: transparent;
+
+    transition: all 0.3s;
+}
+button:hover {
+    background: black;
+    color: white;
 }
