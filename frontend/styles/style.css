@@ -84,7 +84,7 @@ p {
     width: 100%;
 }
 
-button {
+button, a {
     display: block;
 
     border-radius: 10px;
@@ -93,15 +93,50 @@ button {
     padding: 0.8em 1.5em;
     margin: auto;
     width: 100%;
+    box-sizing: border-box;
 
     font-size: 1em;
     font-weight: bold;
+    text-decoration: none;
+    color: black;
 
     background: transparent;
 
     transition: all 0.3s;
 }
-button:hover {
+button:hover, a:hover {
     background: black;
     color: white;
+}
+
+.survey {
+
+    background-color: #e8e8e8;
+
+    min-height: 100vh;
+    min-height: calc(var(--vh, 1vh) * 100);
+    padding: 1.4em;
+
+    box-sizing: border-box;
+}
+
+.survey-content {
+    max-width: 800px;
+    height: 100%;
+    margin: auto;
+}
+
+.survey-content h3 {
+    line-height: 1.25;
+    letter-spacing: 2.5px;
+    color: #000000;
+    font-weight: normal;
+}
+
+.survey-content h2 {
+    text-transform: uppercase;
+    font-weight: bold;
+    line-height: 1.17;
+    letter-spacing: 0.2px;
+    color: var(--dark);
 }
