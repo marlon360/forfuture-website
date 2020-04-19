@@ -2,14 +2,15 @@
   "name": "forfuture-frontend",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "index.html",
   "scripts": {
     "start": "parcel serve index.html",
-    "build": "parcel build index.html"
+    "build": "parcel build index.html -d ./dist/"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "parcel": "^2.0.0-alpha.3.2"
-  }
+    "parcel-bundler": "^1.12.4"
+  },
+  "dependencies": {}
 }
