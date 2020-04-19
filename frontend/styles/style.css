@@ -30,8 +30,8 @@ body {
 
 h1 {
     text-transform: uppercase;
-    margin: 0.8em 0;
-    font-size: 8vh;
+    margin: 0.4em 0 0.1em 0;
+    font-size: 7vh;
     font-weight: bold;
     font-stretch: normal;
     font-style: normal;
