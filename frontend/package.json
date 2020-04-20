@@ -12,5 +12,8 @@
   "devDependencies": {
     "parcel-bundler": "^1.12.4"
   },
-  "dependencies": {}
+  "dependencies": {
+    "@barba/core": "^2.9.7",
+    "animejs": "^3.2.0"
+  }
 }
