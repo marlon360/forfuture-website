@@ -22,6 +22,8 @@ body {
     height: 100vh;
     height: calc(var(--vh, 1vh) * 100);
     padding: 1.4em;
+    max-width: 1000px;
+    margin: auto;
 
     box-sizing: border-box;
 
@@ -135,6 +137,9 @@ p {
 .finished p {
     color: var(--light);
     text-align: center;
+}
+.sorry p {
+    text-align: left;
 }
 
 button, a.button {
