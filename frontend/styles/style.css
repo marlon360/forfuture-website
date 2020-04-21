@@ -15,7 +15,7 @@ body {
 }
 
 .landing {
-    background-image: url('../images/gradient.png');
+    background-image: url('../images/gradient.jpg');
     background-size: cover;
 
     height: 100vh;
@@ -33,25 +33,30 @@ body {
 h1 {
     text-transform: uppercase;
     margin: 0.4em 0 0.1em 0;
-    font-size: 7vh;
+    font-size: 9vh;
     font-weight: bold;
     font-stretch: normal;
     font-style: normal;
-    line-height: 1.11;
-    letter-spacing: 1.88px;
-    color: var(--dark);
+    line-height: 0.94;
+    letter-spacing: 0.2px;
+    color: var(--light);
 }
 
 p {
     font-size: 3vh;
     line-height: 1.33;
-    letter-spacing: 0.4px;
-    color: #000000;
+    letter-spacing: normal;
+}
+
+.landing p {
+    color: var(--light);
 }
 
 .landing2 {
 
     background-color: #e8e8e8;
+    background-image: url('../images/white-bg.jpg');
+    background-size: cover;
 
     height: 100vh;
     height: calc(var(--vh, 1vh) * 100);
