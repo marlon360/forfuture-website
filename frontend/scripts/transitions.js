@@ -2,19 +2,22 @@ import barba from '@barba/core';
 import anime from 'animejs';
 import { buttonSetup } from './select-buttons';
 import { sliderSetup } from './slider';
+import { stateSetup } from './state-controller';
 
 document.addEventListener("DOMContentLoaded", function () {
     barba.init({
         views: [{
             namespace: 'survey',
-            afterEnter() {
-              buttonSetup();
-              sliderSetup();
+            beforeEnter() {
+                stateSetup();
+                buttonSetup();
+                sliderSetup();
             }
         },{
             namespace: 'survey-8',
-            afterEnter() {  
-                buttonSetup();                 
+            beforeEnter() {  
+                stateSetup();               
+                buttonSetup();  
                 let anchor = document.querySelector('.forward');
                 anchor.addEventListener('click', (event) => {
                     event.preventDefault();

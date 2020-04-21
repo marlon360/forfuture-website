@@ -1,7 +1,6 @@
 export function buttonSetup() {
     let buttons = document.querySelectorAll(".survey-details button");
 
-    setAllOff(buttons);
     for (let button of buttons) {
         button.addEventListener('click', () => {
             setAllOff(buttons);
