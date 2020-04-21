@@ -1,13 +1,13 @@
 export function sliderSetup() {
 
-    let slider = document.querySelector('input.slider');
-    let output = document.querySelector('span.output');
+    let slider = document.querySelectorAll('input.slider');
+    let output = document.querySelectorAll('span.output');
 
-    if (output != null && slider != null) {
-        output.innerHTML = slider.value;
-        slider.oninput = function () {
-            output.innerHTML = this.value;
+    for (let i = 0; i < slider.length; i++) {
+        output[i].innerHTML = slider[i].value;
+        slider[i].oninput = function () {
+            output[i].innerHTML = this.value;
         }
     }
-    
+
 }
