@@ -106,7 +106,7 @@ button, a.button {
 
     transition: all 0.3s;
 }
-button:hover, a.button:hover {
+button:hover, a.button:hover, button.on {
     background: black;
     color: white;
     cursor: pointer;

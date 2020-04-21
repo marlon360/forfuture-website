@@ -1,8 +1,15 @@
 import barba from '@barba/core';
 import anime from 'animejs';
+import { buttonSetup } from './select-buttons';
 
 document.addEventListener("DOMContentLoaded", function () {
     barba.init({
+        views: [{
+            namespace: 'survey',
+            afterEnter() {
+              buttonSetup()
+            }
+        }],
         transitions: [{
             sync: true,
             leave({ current, trigger }) {
