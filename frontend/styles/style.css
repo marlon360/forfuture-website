@@ -264,6 +264,10 @@ span.underline {
 
 .slider-container {
     width: 100%; /* Width of the outside container */
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
   }
   
   /* The slider itself */
@@ -300,6 +304,8 @@ span.output {
     border-radius: 10px;
     border: solid 2px var(--dark);
 
+    width: 3.2em;
+
     padding: 0.3em 0.7em;
     margin: auto;
     box-sizing: border-box;
@@ -308,4 +314,5 @@ span.output {
     text-align: center;
     font-size: 1.5em;
     margin-top: 1em;
+    margin-right: 1em;
   }
