@@ -137,9 +137,11 @@ button:hover, a.button:hover {
 
 .survey-content h3 {
     line-height: 1.25;
-    letter-spacing: 2.5px;
+    letter-spacing: 4px;
     color: #000000;
     font-weight: normal;
+    font-size: 1em;
+    margin: 0;
 }
 
 .survey-content h2 {
@@ -147,7 +149,12 @@ button:hover, a.button:hover {
     font-weight: bold;
     line-height: 1.17;
     letter-spacing: 0.2px;
+    margin-top: 0.5em;
     color: var(--dark);
+}
+
+.survey-content .survey-details {
+    padding-top: 1.2em;
 }
 
 .survey .right-arrow {
