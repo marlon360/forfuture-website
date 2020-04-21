@@ -200,6 +200,29 @@ button:hover, a.button:hover, button.on {
     text-align: center;
 }
 
+.survey-details p {
+    margin-top: 0;
+
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.47;
+    letter-spacing: 0.2px;
+    color: #000000;
+}
+
+.survey-details textarea {
+    width: 100%;
+    border-radius: 10px;
+    border: solid 2px var(--dark);
+
+    min-height: 150px;
+
+    box-sizing: border-box;
+
+    padding: 0.6em 1.3em;
+}
+
 span.underline {
     text-decoration: underline;
 }
