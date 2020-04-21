@@ -11,15 +11,21 @@
     <main data-barba="container" data-barba-namespace="survey">
         <div class="survey">
             <div class="survey-content">
-                <h3 class="number">08/12</h3>
-                <h2 class="question">Interessierst du dich für das Thema <span class="underline">Nachhaltigkeit</span>?</h2>
+                <h3 class="number">09/12</h3>
+                <h2 class="question">Für wie Nachhaltig schätzt du dich ein?</h2>
                 <div class="survey-details">
-                    <button class="medium">Ja</button>
-                    <button class="medium">Nein</button>
+                    <p>
+                        0 = Absolut gar nicht,<br />
+                        10 = Sehr! Ich verzichte sogar auf‘s Flugzeug fliegen, um in den Urlaub zu kommen.
+                    </p>
+                    <div class="slider-container">
+                        <input class="slider" value="0" type="range" min="0" max="10" step="1">
+                        <span class="output">0</span>
+                    </div>
                 </div>
             </div>
             <div class="arrows">
-                <a data-direction="backward" href="07b.html">
+                <a data-direction="backward" href="08.html">
                     <img class="left-arrow" src="../icons/arrow.svg">
                 </a>
                 <a data-direction="forward" href="09.html">

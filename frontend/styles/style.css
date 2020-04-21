@@ -226,3 +226,51 @@ button:hover, a.button:hover, button.on {
 span.underline {
     text-decoration: underline;
 }
+
+.slider-container {
+    width: 100%; /* Width of the outside container */
+  }
+  
+  /* The slider itself */
+  .slider {
+    -webkit-appearance: none;  /* Override default CSS styles */
+    appearance: none;
+    width: 100%; /* Full-width */
+    height: 15px; /* Specified height */
+    background: rgb(194, 194, 194); /* Grey background */
+    outline: none; /* Remove outline */
+    border-radius: 12px;
+    margin-top: 2em;
+  }
+  
+  /* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */ 
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    border-radius: 100%;
+    width: 25px; /* Set a specific slider handle width */
+    height: 25px; /* Slider handle height */
+    background: var(--dark); /* Green background */
+    cursor: pointer; /* Cursor on hover */
+  }
+  
+  .slider::-moz-range-thumb {
+    width: 25px; /* Set a specific slider handle width */
+    height: 25px; /* Slider handle height */
+    background: var(--dark); /* Green background */
+    cursor: pointer; /* Cursor on hover */
+  }
+
+span.output {
+    border-radius: 10px;
+    border: solid 2px var(--dark);
+
+    padding: 0.3em 0.7em;
+    margin: auto;
+    box-sizing: border-box;
+
+    display: inline-block;
+    text-align: center;
+    font-size: 1.5em;
+    margin-top: 1em;
+  }

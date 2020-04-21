@@ -1,13 +1,15 @@
 import barba from '@barba/core';
 import anime from 'animejs';
 import { buttonSetup } from './select-buttons';
+import { sliderSetup } from './slider';
 
 document.addEventListener("DOMContentLoaded", function () {
     barba.init({
         views: [{
             namespace: 'survey',
             afterEnter() {
-              buttonSetup()
+              buttonSetup();
+              sliderSetup();
             }
         }],
         transitions: [{
