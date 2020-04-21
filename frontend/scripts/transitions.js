@@ -18,15 +18,69 @@ document.addEventListener("DOMContentLoaded", function () {
             beforeEnter() {  
                 stateSetup();               
                 buttonSetup();  
+                sliderSetup();
                 let anchor = document.querySelector('.forward');
                 anchor.addEventListener('click', (event) => {
                     event.preventDefault();
-                    let button = document.querySelector("button.on");
-                    if (button != null) {
-                        if (button.value == "yes") {                        
+                    if (window.state["sustainability"] != null) {                        
+                        if (window.state.sustainability == "yes") {                        
                             barba.go("09.html");
                         } else {
                             barba.go("09b.html");
+                        }
+                    }
+                })
+            }
+        },{
+            namespace: 'survey-1',
+            beforeEnter() {  
+                stateSetup();               
+                buttonSetup();  
+                sliderSetup();
+                let anchor = document.querySelector('.forward');
+                anchor.addEventListener('click', (event) => {
+                    event.preventDefault();
+                    if (window.state["age"] != null) {
+                        if (window.state.age == "-16" || window.state.age == "19+") {
+                            barba.go("sorry.html");
+                        } else {
+                            barba.go("02.html");
+                        }
+                    }
+                })
+            }
+        },{
+            namespace: 'survey-3',
+            beforeEnter() {  
+                stateSetup();               
+                buttonSetup();  
+                sliderSetup();
+                let anchor = document.querySelector('.forward');
+                anchor.addEventListener('click', (event) => {
+                    event.preventDefault();
+                    if (window.state["future"] != null) {
+                        if (window.state.future == "no") {
+                            barba.go("sorry.html");
+                        } else {
+                            barba.go("04.html");
+                        }
+                    }
+                })
+            }
+        },{
+            namespace: 'survey-12',
+            beforeEnter() {  
+                stateSetup();               
+                buttonSetup();  
+                sliderSetup();
+                let anchor = document.querySelector('.backward');
+                anchor.addEventListener('click', (event) => {
+                    event.preventDefault();
+                    if (window.state["sustainability"] != null) {
+                        if (window.state.sustainability == "no") {
+                            barba.go("ueberflieger.html");
+                        } else {
+                            barba.go("11.html");
                         }
                     }
                 })
