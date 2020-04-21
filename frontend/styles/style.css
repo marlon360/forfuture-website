@@ -15,7 +15,7 @@ body {
     overflow-x: hidden;
 }
 
-.landing {
+.landing, .finished {
     background-image: url('../images/gradient.jpg');
     background-size: cover;
 
@@ -29,8 +29,11 @@ body {
     flex-direction: column;
     justify-content: space-between;
 }
+.finished {
+    background-image: url('../images/gradient-2.jpg');
+}
 
-.landing-content {
+.landing-content, .finished-content {
     max-width: 800px;
     margin: 0 auto;
 }
@@ -114,11 +117,24 @@ p {
     color: #000000;
 }
 
-.landing2-content .bottom {
+.landing2-content .bottom, .finished-content .bottom {
     text-align: center;
     margin: 1em auto;
     max-width: 400px;
     width: 100%;
+}
+
+.finished a.button {
+    border: solid 2px var(--light);
+    color: var(--light);
+}
+.finished a.button:hover {
+    background-color: #FFFFFF;
+    color: #000000;
+}
+.finished p {
+    color: var(--light);
+    text-align: center;
 }
 
 button, a.button {
@@ -136,6 +152,7 @@ button, a.button {
     font-weight: bold;
     text-decoration: none;
     color: black;
+    text-align: center;
 
     background: transparent;
 
@@ -174,6 +191,15 @@ button:hover, a.button:hover, button.on {
     line-height: 1.25;
     letter-spacing: 4px;
     color: #000000;
+    font-weight: normal;
+    font-size: 1em;
+    margin: 0;
+}
+
+.finished h3 {
+    line-height: 1.25;
+    letter-spacing: 4px;
+    color: var(--light);
     font-weight: normal;
     font-size: 1em;
     margin: 0;
