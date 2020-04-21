@@ -19,16 +19,18 @@ document.addEventListener("DOMContentLoaded", function () {
                 stateSetup();               
                 buttonSetup();  
                 sliderSetup();
-                let anchor = document.querySelector('.forward');
-                anchor.addEventListener('click', (event) => {
-                    event.preventDefault();
-                    if (window.state["sustainability"] != null) {                        
-                        if (window.state.sustainability == "yes") {                        
-                            barba.go("09.html");
-                        } else {
-                            barba.go("09b.html");
+                let anchors = document.querySelectorAll('.forward');
+                anchors.forEach((anchor) =>{
+                    anchor.addEventListener('click', (event) => {
+                        event.preventDefault();
+                        if (window.state["sustainability"] != null) {                        
+                            if (window.state.sustainability == "yes") {                        
+                                barba.go("09.html");
+                            } else {
+                                barba.go("09b.html");
+                            }
                         }
-                    }
+                    })
                 })
             }
         },{
@@ -37,16 +39,18 @@ document.addEventListener("DOMContentLoaded", function () {
                 stateSetup();               
                 buttonSetup();  
                 sliderSetup();
-                let anchor = document.querySelector('.forward');
-                anchor.addEventListener('click', (event) => {
-                    event.preventDefault();
-                    if (window.state["age"] != null) {
-                        if (window.state.age == "-16" || window.state.age == "19+") {
-                            barba.go("sorry.html");
-                        } else {
-                            barba.go("02.html");
+                let anchors = document.querySelectorAll('.forward');
+                anchors.forEach((anchor) =>{
+                    anchor.addEventListener('click', (event) => {                        
+                        event.preventDefault();
+                        if (window.state["age"] != null) {
+                            if (window.state.age == "-16" || window.state.age == "19+") {
+                                barba.go("sorry.html");
+                            } else {
+                                barba.go("02.html");
+                            }
                         }
-                    }
+                    })
                 })
             }
         },{
@@ -55,16 +59,18 @@ document.addEventListener("DOMContentLoaded", function () {
                 stateSetup();               
                 buttonSetup();  
                 sliderSetup();
-                let anchor = document.querySelector('.forward');
-                anchor.addEventListener('click', (event) => {
-                    event.preventDefault();
-                    if (window.state["future"] != null) {
-                        if (window.state.future == "no") {
-                            barba.go("sorry.html");
-                        } else {
-                            barba.go("04.html");
+                let anchors = document.querySelectorAll('.forward');
+                anchors.forEach((anchor) =>{
+                    anchor.addEventListener('click', (event) => {
+                        event.preventDefault();
+                        if (window.state["future"] != null) {
+                            if (window.state.future == "no") {
+                                barba.go("sorry.html");
+                            } else {
+                                barba.go("04.html");
+                            }
                         }
-                    }
+                    })
                 })
             }
         },{
@@ -73,17 +79,51 @@ document.addEventListener("DOMContentLoaded", function () {
                 stateSetup();               
                 buttonSetup();  
                 sliderSetup();
-                let anchor = document.querySelector('.backward');
-                anchor.addEventListener('click', (event) => {
-                    event.preventDefault();
-                    if (window.state["sustainability"] != null) {
-                        if (window.state.sustainability == "no") {
-                            barba.go("ueberflieger.html");
-                        } else {
-                            barba.go("11.html");
+                let anchors = document.querySelectorAll('.backward');
+                anchors.forEach((anchor) =>{
+                    anchor.addEventListener('click', (event) => {
+                        event.preventDefault();
+                        if (window.state["sustainability"] != null) {
+                            if (window.state.sustainability == "no") {
+                                barba.go("ueberflieger.html");
+                            } else {
+                                barba.go("11.html");
+                            }
                         }
-                    }
-                })
+                    })
+                });
+            }
+        },{
+            namespace: 'survey-2',
+            beforeEnter() {  
+                stateSetup();               
+                buttonSetup();  
+                sliderSetup();
+                let anchors = document.querySelectorAll('.forward');
+                anchors.forEach((anchor) =>{
+                    anchor.addEventListener('click', (event) => {
+                        event.preventDefault();
+                        if (window.state["sex"] != null) {
+                            barba.go("03.html");
+                        }
+                    })
+                });
+            }
+        },{
+            namespace: 'survey-source',
+            beforeEnter() {  
+                stateSetup();               
+                buttonSetup();  
+                sliderSetup();
+                let anchors = document.querySelectorAll('.forward');
+                anchors.forEach((anchor) =>{
+                    anchor.addEventListener('click', (event) => {
+                        event.preventDefault();
+                        if (window.state["source"] != null) {
+                            barba.go("finished.html");
+                        }
+                    })
+                });
             }
         }],
         transitions: [{
