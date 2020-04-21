@@ -6,7 +6,12 @@ function setViewportHeight() {
 // set viewport height on start
 setViewportHeight();
 
+let width = window.width;
+
 // set new viewport height on resize
 window.addEventListener('resize', () => {
-    setViewportHeight();
+    if (window.width != width) {
+        setViewportHeight();
+        width = window.width;
+    }
 });
