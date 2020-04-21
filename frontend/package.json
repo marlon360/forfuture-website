@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.html",
   "scripts": {
-    "start": "parcel serve index.html",
-    "build": "parcel build index.html -d ./dist/"
+    "start": "parcel serve index.html pages/*.html",
+    "build": "parcel build index.html pages/*.html -d ./dist/"
   },
   "author": "",
   "license": "ISC",
