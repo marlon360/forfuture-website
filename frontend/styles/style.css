@@ -114,6 +114,8 @@ button:hover, a.button:hover {
 
 .survey {
     background-color: #e8e8e8;
+    background-image: url('../images/white-bg.jpg');
+    background-size: cover;
 
     min-height: 100vh;
     min-height: calc(var(--vh, 1vh) * 100);
