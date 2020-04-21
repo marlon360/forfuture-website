@@ -23,11 +23,15 @@ body {
     padding: 1.4em;
 
     box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .landing-content {
     max-width: 800px;
-    margin: auto;
+    margin: 0 auto;
 }
 
 h1 {
@@ -43,7 +47,7 @@ h1 {
 }
 
 p {
-    font-size: 3vh;
+    font-size: 1.2em;
     line-height: 1.33;
     letter-spacing: normal;
 }
@@ -51,6 +55,30 @@ p {
 .landing p {
     color: var(--light);
 }
+
+.landing .arrow-wrapper {
+    margin: 2em auto;
+}
+
+.landing img.arrow {
+    transform: rotate(-90deg);
+}
+
+.bounce {
+    animation: bounce 2s infinite;
+  }
+  
+  @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-20px);
+    }
+    60% {
+      transform: translateY(-10px);
+    }
+  }
 
 .landing2 {
 
