@@ -11,15 +11,32 @@ document.addEventListener("DOMContentLoaded", function () {
               buttonSetup();
               sliderSetup();
             }
+        },{
+            namespace: 'survey-8',
+            afterEnter() {  
+                buttonSetup();                 
+                let anchor = document.querySelector('.forward');
+                anchor.addEventListener('click', (event) => {
+                    event.preventDefault();
+                    let button = document.querySelector("button.on");
+                    if (button != null) {
+                        if (button.value == "yes") {                        
+                            barba.go("09.html");
+                        } else {
+                            barba.go("09b.html");
+                        }
+                    }
+                })
+            }
         }],
         transitions: [{
             sync: true,
             leave({ current, trigger }) {
 
                 let translateX = [0, "-100%"];
-                if (trigger.dataset["direction"] == "forward") {
+                if (trigger.dataset?.direction == "forward") {
                     translateX = [0, "-100%"];
-                } else if (trigger.dataset["direction"] == "backward") {
+                } else if (trigger.dataset?.direction == "backward") {
                     translateX = [0, "100%"];
                 }
 
@@ -36,9 +53,9 @@ document.addEventListener("DOMContentLoaded", function () {
             enter({ next, trigger }) {
 
                 let translateX = ["100%", 0];
-                if (trigger.dataset["direction"] == "forward") {
+                if (trigger.dataset?.direction == "forward") {
                     translateX = ["100%", 0];
-                } else if (trigger.dataset["direction"] == "backward") {
+                } else if (trigger.dataset?.direction == "backward") {
                     translateX = ["-100%", 0];
                 }
 
