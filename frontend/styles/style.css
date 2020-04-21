@@ -199,3 +199,7 @@ button:hover, a.button:hover, button.on {
     letter-spacing: 0.2px;
     text-align: center;
 }
+
+span.underline {
+    text-decoration: underline;
+}
