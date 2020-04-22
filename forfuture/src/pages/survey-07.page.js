@@ -11,8 +11,8 @@ function Survey07Page() {
     }
 
     return (
-        <SurveyFrame number="07/12" question={<>Denkst du manchmal über deine <span class="underline">Zukunft</span> nach?</>} prevPath="/06b" nextPath="/07b">
-            <SelectorComponent onChange={onChange} items={items}></SelectorComponent>
+        <SurveyFrame number="07/12" question="Die Zukunft zu gestalten, kann auch schon in der Jetzt-Zeit beginnen. Du gehst zum Beispiel in die Schule, um in (einer etwas entfernten) Zukunft einen coolen Job zu haben…" prevPath="/06a" nextPath="/07b">
+
         </SurveyFrame>
     );
 }

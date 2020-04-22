@@ -11,8 +11,17 @@ function Survey09bPage() {
     }
 
     return (
-        <SurveyFrame number="09/12" question={<>Denkst du manchmal über deine <span class="underline">Zukunft</span> nach?</>} prevPath="/08" nextPath="/1011-skip">
-            <SelectorComponent onChange={onChange} items={items}></SelectorComponent>
+        <SurveyFrame number="09/12" question="Was ist der Grund dahinter?" prevPath="/08" nextPath="/1011-skip">
+            <p>
+                Keine Lust, denn…<br/>
+
+                Keine Zeit, weil…<br/>
+
+                Wieso immer »Nachhaltigkeit«?<br/>
+
+                Sonstiges…
+            </p>
+            <textarea data-state="no-sustainability-reasons"></textarea>
         </SurveyFrame>
     );
 }

@@ -11,7 +11,7 @@ function Survey08Page() {
     }
 
     return (
-        <SurveyFrame number="08/12" question={<>Denkst du manchmal über deine <span class="underline">Zukunft</span> nach?</>} prevPath="/07b" nextPath="/09">
+        <SurveyFrame number="08/12" question={<>Interessierst du dich für das Thema <span class="underline">Nachhaltigkeit</span>?</>} prevPath="/07b" nextPath="/09">
             <SelectorComponent onChange={onChange} items={items}></SelectorComponent>
         </SurveyFrame>
     );

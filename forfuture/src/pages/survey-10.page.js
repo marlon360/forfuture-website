@@ -1,6 +1,6 @@
 import React from 'react';
 import SurveyFrame from '../components/survey-frame.component';
-import SelectorComponent from '../components/selector.component';
+import SliderComponent from '../components/slider.component';
 
 function Survey10Page() {
 
@@ -11,8 +11,12 @@ function Survey10Page() {
     }
 
     return (
-        <SurveyFrame number="10/12" question={<>Denkst du manchmal über deine <span class="underline">Zukunft</span> nach?</>} prevPath="/09" nextPath="/11">
-            <SelectorComponent onChange={onChange} items={items}></SelectorComponent>
+        <SurveyFrame number="10/12" question="Wie sehr achtest du in deinem Alltag darauf Nachhaltig zu sein?" prevPath="/09" nextPath="/11">
+            <p>
+                0 = Gar nicht.<br/>
+                10 = 100% Plastik frei, trage faire-öko Kleidung, bin bei einer Öko-Bank, und benutzte Öko-Strom – ich bin der MASTER!
+            </p>
+            <SliderComponent min={1} max={5}></SliderComponent>
         </SurveyFrame>
     );
 }

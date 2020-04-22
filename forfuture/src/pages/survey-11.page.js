@@ -11,8 +11,14 @@ function Survey11Page() {
     }
 
     return (
-        <SurveyFrame number="11/12" question={<>Denkst du manchmal über deine <span class="underline">Zukunft</span> nach?</>} prevPath="/10" nextPath="/12">
-            <SelectorComponent onChange={onChange} items={items}></SelectorComponent>
+        <SurveyFrame number="11/12" question="Was tust du, um einen Unterschied zu machen?" prevPath="/10" nextPath="/12">
+            <p>
+                Ich verzichte auf…<br/>
+                Ich mache…<br/>
+                Ich engagiere mich für…<br/>
+                Sonstiges…
+            </p>
+            <textarea data-state="difference"></textarea>
         </SurveyFrame>
     );
 }

@@ -11,8 +11,8 @@ function Survey07bPage() {
     }
 
     return (
-        <SurveyFrame number="07/12" question={<>Denkst du manchmal über deine <span class="underline">Zukunft</span> nach?</>} prevPath="/07" nextPath="/08">
-            <SelectorComponent onChange={onChange} items={items}></SelectorComponent>
+        <SurveyFrame number="07/12" question="…Fällt dir noch etwas ein, wie du gerade in deine Zukunft investierst?" prevPath="/07" nextPath="/08">
+            <textarea data-state="future-investments"></textarea>
         </SurveyFrame>
     );
 }

@@ -11,8 +11,8 @@ function Survey1011SkipPage() {
     }
 
     return (
-        <SurveyFrame number="DU ALTER ÜBERFLIEGER!" question={<>Denkst du manchmal über deine <span class="underline">Zukunft</span> nach?</>} prevPath="/09b" nextPath="/12">
-            <SelectorComponent onChange={onChange} items={items}></SelectorComponent>
+        <SurveyFrame number="DU ALTER ÜBERFLIEGER!" question="Frage 10 und 11 werden aufgrund deiner Antwort übersprungen." prevPath="/09b" nextPath="/12">
+            <p>Klick weiter!</p>
         </SurveyFrame>
     );
 }

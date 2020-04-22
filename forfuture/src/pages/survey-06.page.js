@@ -11,8 +11,8 @@ function Survey06Page() {
     }
 
     return (
-        <SurveyFrame number="06/12" question={<>Denkst du manchmal über deine <span class="underline">Zukunft</span> nach?</>} prevPath="/05" nextPath="/06a">
-            <SelectorComponent onChange={onChange} items={items}></SelectorComponent>
+        <SurveyFrame number="06/12" question=".…und was sollte man deiner Meinung nach einschränken bzw. unterlassen?" prevPath="/05" nextPath="/06a">
+            <textarea data-state="restrictions"></textarea>
         </SurveyFrame>
     );
 }

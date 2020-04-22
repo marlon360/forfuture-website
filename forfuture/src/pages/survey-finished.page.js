@@ -7,13 +7,20 @@ function SurveyFinishedPage() {
     const items = ["Ja", "Nein"]
 
     const onChange = (evt) => {
-        
+
     }
 
     return (
-        <SurveyFrame number="03/12" question={<>Denkst du manchmal über deine <span class="underline">Zukunft</span> nach?</>} prevPath="/01" nextPath="/02">
-            <SelectorComponent onChange={onChange} items={items}></SelectorComponent>
-        </SurveyFrame>
+        <div class="finished">
+            <div class="finished-content">
+                <h3 class="number">FERTIG!</h3>
+                <h1>Das war’s schon. super, dass du dabei warst!</h1>
+            </div>
+            <div class="bottom">
+                <p>Jetzt endgültig</p>
+                <a class="button" href="#">Antworten abschicken!</a>
+            </div>
+        </div>
     );
 }
 

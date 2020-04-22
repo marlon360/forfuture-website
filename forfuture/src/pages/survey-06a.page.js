@@ -11,8 +11,11 @@ function Survey06aPage() {
     }
 
     return (
-        <SurveyFrame number="NOCH DA?" question={<>Denkst du manchmal über deine <span class="underline">Zukunft</span> nach?</>} prevPath="/06" nextPath="/07">
-            <SelectorComponent onChange={onChange} items={items}></SelectorComponent>
+        <SurveyFrame number="NOCH DA?" question="" prevPath="/06" nextPath="/07">
+            <div>
+                <iframe src="https://giphy.com/embed/X8lpsy3YBcIJW" width="100%" height="100%" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+            </div>
+            <p><a href="https://giphy.com/gifs/X8lpsy3YBcIJW">via GIPHY</a></p>
         </SurveyFrame>
     );
 }

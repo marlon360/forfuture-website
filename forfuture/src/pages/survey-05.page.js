@@ -11,8 +11,9 @@ function Survey05Page() {
     }
 
     return (
-        <SurveyFrame number="05/12" question={<>Denkst du manchmal über deine <span class="underline">Zukunft</span> nach?</>} prevPath="/04" nextPath="/06">
-            <SelectorComponent onChange={onChange} items={items}></SelectorComponent>
+        <SurveyFrame number="05/12" question={<>Was wünschst du dir für <span class="underline">unsere</span> Zukunft in <span class="underline">Deutschland?</span></>} prevPath="/04" nextPath="/06">
+            <p>Bessere Bildung, Förderung von Digitalisierung, sozialem Ausgleich, Eiscreme for free jeden Donnerstag nach 16 Uhr…</p>
+            <textarea></textarea>
         </SurveyFrame>
     );
 }

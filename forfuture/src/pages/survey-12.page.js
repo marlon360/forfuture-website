@@ -11,8 +11,8 @@ function Survey11Page() {
     }
 
     return (
-        <SurveyFrame number="12/12" question={<>Denkst du manchmal über deine <span class="underline">Zukunft</span> nach?</>} prevPath="/11" nextPath="/source">
-            <SelectorComponent onChange={onChange} items={items}></SelectorComponent>
+        <SurveyFrame number="12/12" question={<>Was könnte dich <span class="underline">motivieren</span>, (noch) nachhaltiger zu leben?</>} prevPath="/11" nextPath="/source">
+            <textarea data-state="sustainability-motivation"></textarea>
         </SurveyFrame>
     );
 }
