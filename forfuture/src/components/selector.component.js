@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 
-function SelectorComponent({items, onChange}) {
+function SelectorComponent({items, onChange, size}) {
+
+    // default
+    size = size ? size : "medium";
 
     const [selected, setSelected] = useState(-1);
 
@@ -14,7 +17,7 @@ function SelectorComponent({items, onChange}) {
     return (
         <>
             {items.map((item, i) => {     
-                return (<button className={`small ${selected === i ? "on" : ""}`} onClick={() => select(i)} key={i}>{ item }</button>) 
+                return (<button className={`${size} ${selected === i ? "on" : ""}`} onClick={() => select(i)} key={i}>{ item }</button>) 
             })}
         </>
     );

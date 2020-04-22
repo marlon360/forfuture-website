@@ -10,6 +10,7 @@ import { CrossFade } from './transitions/transitions'
 
 import LandingPage from './pages/landing.page';
 import Survey01Page from './pages/survey-01.page';
+import Survey02Page from './pages/survey-02.page';
 
 function App() {
 
@@ -30,9 +31,8 @@ function App() {
       {transitionModal.map(({ item, props, key }) => (
         <animated.div className="page" key={key} style={props}>
           <Switch location={item}>
-              <Route path="/01">
-                <Survey01Page/>
-              </Route>
+              <Route path="/01" component={Survey01Page}/>
+              <Route path="/02" component={Survey02Page}/>
               <Route exact path="/">
                 <LandingPage/>
               </Route>

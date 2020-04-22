@@ -11,8 +11,8 @@ function Survey01Page() {
     }
 
     return (
-        <SurveyFrame number="01/12" question="Wie alt bist du?" prevPath="/" nextPath="/">
-            <SelectorComponent onChange={onChange} items={items}></SelectorComponent>
+        <SurveyFrame number="01/12" question="Wie alt bist du?" prevPath="/" nextPath="/02">
+            <SelectorComponent size="small" onChange={onChange} items={items}></SelectorComponent>
         </SurveyFrame>
     );
 }
