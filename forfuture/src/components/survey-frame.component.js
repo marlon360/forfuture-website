@@ -1,6 +1,10 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 
-function SurveyFrame({number, question, children}) {
+import Arrow from '../icons/arrow.svg';
+import { SlideRight, SlideLeft } from '../transitions/transitions';
+
+function SurveyFrame({number, question, children, prevPath, nextPath}) {
 
     return (
         <div className="survey">
@@ -12,12 +16,22 @@ function SurveyFrame({number, question, children}) {
                 </div>
             </div>
             <div className="arrows">
-                <a data-barba-prevent href="../index.html">
-                    {/* <img className="left-arrow" src="../icons/arrow.svg" /> */}
-                </a>
-                <a className="forward" data-direction="forward" href="#">
-                    {/* <img className="right-arrow" src="../icons/arrow.svg" /> */}
-                </a>
+                <Link className="backward" to={{
+                    pathname: prevPath,
+                    state: {
+                        transition: SlideRight
+                    }
+                }}>
+                    <img className="left-arrow" src={Arrow} />
+                </Link>
+                <Link className="backward" to={{
+                    pathname: nextPath,
+                    state: {
+                        transition: SlideLeft
+                    }
+                }}>
+                    <img className="right-arrow" src={Arrow} />
+                </Link>
             </div>
         </div>
     );

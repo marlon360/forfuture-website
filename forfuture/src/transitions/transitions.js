@@ -21,3 +21,9 @@ export const SlideDown = {
     enter: { opacity: 1, transform: 'translate3d(0, 0, 0)', zIndex: 0 },
     leave: { opacity: 1, transform: 'translate3d(0, 100%, 0)', zIndex: 20 },
 }
+
+export const CrossFade = {
+    from: { opacity: 0, transform: 'translate3d(0%, 0, 0)' },
+    enter: { opacity: 1 },
+    leave: { opacity: 0 },
+}

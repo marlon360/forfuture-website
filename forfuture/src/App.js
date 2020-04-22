@@ -6,6 +6,7 @@ import {
   Switch
 } from "react-router-dom";
 import { useTransition, animated } from 'react-spring'
+import { CrossFade } from './transitions/transitions'
 
 import LandingPage from './pages/landing.page';
 import Survey01Page from './pages/survey-01.page';
@@ -18,11 +19,7 @@ function App() {
     if (location.state && location.state.transition) {      
       return location.state.transition
     } else {
-      return {
-        from: { opacity: 0, transform: 'translate3d(0%, 0, 0)' },
-        enter: { opacity: 1 },
-        leave: { opacity: 0 },
-      }
+      return CrossFade;
     }
   }
 

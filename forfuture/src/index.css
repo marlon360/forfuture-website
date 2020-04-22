@@ -247,7 +247,7 @@ button:hover, a.button:hover, button.on {
     margin: 1em auto;
 }
 
-#page-01 .survey-details {
+.survey .survey-details {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
