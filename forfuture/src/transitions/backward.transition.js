@@ -1,6 +1,5 @@
-export class BackwardTransition {
-
-    static config = {
+export const BackwardTransition = {
+    config: {
         atEnter: {
             translateX: -100,
         },
@@ -10,9 +9,8 @@ export class BackwardTransition {
         atActive: {
             translateX: 0,
         },
-    }
-
-    static mapStyles(styles) {
+    },
+    mapStyles(styles) {
         return {
             transform: `translateX(${styles.translateX}%)`,
         };

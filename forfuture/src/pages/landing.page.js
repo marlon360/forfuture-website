@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link } from "react-router-dom";
+import { ForwardTransition } from '../transitions/forward.transition';
+import { Transition } from '../transitions/transitions';
 
 function LandingPage() {
   return (
@@ -25,7 +27,12 @@ function LandingPage() {
                 </div>
                 <div class="bottom">
                     <p>Habe ich verstanden.</p>
-                    <Link class="button" to="/01">Los geht's!</Link>
+                    <Link class="button" to={{
+                        pathname: '/01',
+                        state: {
+                            transition: Transition.FORWARD
+                        }
+                    }}>Los geht's!</Link>
                 </div>
             </div>
         </div>

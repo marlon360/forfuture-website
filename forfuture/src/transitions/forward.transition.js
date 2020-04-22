@@ -1,6 +1,5 @@
-export class ForwardTransition {
-
-    static config = {
+export const ForwardTransition = {
+    config: {
         atEnter: {
             translateX: 100,
         },
@@ -10,9 +9,8 @@ export class ForwardTransition {
         atActive: {
             translateX: 0,
         },
-    }
-
-    static mapStyles(styles) {
+    },
+    mapStyles(styles) {
         return {
             transform: `translateX(${styles.translateX}%)`,
         };

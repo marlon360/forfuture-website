@@ -2,23 +2,21 @@ import React from 'react';
 import logo from './logo.svg';
 import {
   BrowserRouter as Router,
-  useParams,
+  useParams,useLocation,
   Route,
   Link
 } from "react-router-dom";
 import { AnimatedSwitch } from 'react-router-transition';
 
-import { ForwardTransition } from './transitions/forward.transition';
-import { BackwardTransition } from './transitions/backward.transition';
-
 import LandingPage from './pages/landing.page';
 import Survey01Page from './pages/survey-01.page';
+import { getTransition } from './transitions/transitions';
 
 function App() {
 
-  const params = useParams();
+  const { state } = useLocation();  
 
-  const transition = ForwardTransition;
+  const transition = getTransition(state?.transition);
 
   return (
     <div className="App">
