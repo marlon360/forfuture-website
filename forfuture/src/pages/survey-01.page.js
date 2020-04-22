@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Survey01Component() {
+function Survey01Page() {
     return (
         <div class="survey" id="page-01">
             <div class="survey-content">
@@ -27,4 +27,4 @@ function Survey01Component() {
     );
 }
 
-export default Survey01Component;
+export default Survey01Page;

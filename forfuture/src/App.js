@@ -8,8 +8,8 @@ import {
 } from "react-router-dom";
 import { AnimatedSwitch } from 'react-router-transition';
 
-import LandingComponent from './components/landing.component';
-import Suvey01Component from './components/survey-01.component';
+import LandingPage from './pages/landing.page';
+import Survey01Page from './pages/survey-01.page';
 
 function App() {
 
@@ -43,10 +43,10 @@ function App() {
           mapStyles={mapStyles}
         >
           <Route path="/01">
-            <Suvey01Component/>
+            <Survey01Page/>
           </Route>
           <Route path="/">
-            <LandingComponent/>
+            <LandingPage/>
           </Route>
         </AnimatedSwitch>
       </Router>
