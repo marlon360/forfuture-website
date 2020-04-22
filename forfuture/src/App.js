@@ -27,6 +27,7 @@ import Survey12Page from './pages/survey-12.page';
 import Survey1011SkipPage from './pages/survey-1011-skip.page';
 import SurveyFinishedPage from './pages/survey-finished.page';
 import SurveySourcePage from './pages/survey-source.page';
+import SurveySorryPage from './pages/survey-sorry.page';
 
 function App() {
 
@@ -65,6 +66,7 @@ function App() {
               <Route path="/source" component={SurveySourcePage}/>
               <Route path="/finished" component={SurveyFinishedPage}/>
               <Route path="/1011-skip" component={Survey1011SkipPage}/>
+              <Route path="/sorry" component={SurveySorryPage}/>
               <Route exact path="/">
                 <LandingPage/>
               </Route>
