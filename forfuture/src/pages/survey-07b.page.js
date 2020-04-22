@@ -2,19 +2,19 @@ import React from 'react';
 import SurveyFrame from '../components/survey-frame.component';
 import SelectorComponent from '../components/selector.component';
 
-function Survey02Page() {
+function Survey07bPage() {
 
-    const items = ["Weiblich", "Männlich", "keine Angabe"]
+    const items = ["Ja", "Nein"]
 
     const onChange = (evt) => {
         
     }
 
     return (
-        <SurveyFrame number="02/12" question="Welches Geschlecht hast du?" prevPath="/01" nextPath="/03">
+        <SurveyFrame number="07/12" question={<>Denkst du manchmal über deine <span class="underline">Zukunft</span> nach?</>} prevPath="/07" nextPath="/08">
             <SelectorComponent onChange={onChange} items={items}></SelectorComponent>
         </SurveyFrame>
     );
 }
 
-export default Survey02Page;
+export default Survey07bPage;
