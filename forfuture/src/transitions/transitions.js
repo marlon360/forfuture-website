@@ -1,20 +1,23 @@
-import { ForwardTransition } from "./forward.transition";
-import { BackwardTransition } from "./backward.transition";
-
-export const Transition = {
-    FORWARD: "forward",
-    BACKWARD: "backward"
+export const SlideLeft = {
+    from: { opacity: 0.5, transform: 'translate3d(100%, 0, 0)', zIndex: 0 },
+    enter: { opacity: 1, transform: 'translate3d(0%, 0, 0)', zIndex: 10 },
+    leave: { opacity: 0.6, transform: 'translate3d(-100%, 0, 0)', zIndex: 0 },
 }
 
-const transitions = {};
+export const SlideRight = {
+    from: { opacity: 0.6, transform: 'translate3d(-100%, 0, 0)', zIndex: 0 },
+    enter: { opacity: 1, transform: 'translate3d(0%, 0, 0)', zIndex: 0 },
+    leave: { opacity: 1, transform: 'translate3d(100%, 0, 0)', zIndex: 10 },
+}
 
-// register transitions
-transitions["forward"] = ForwardTransition;
-transitions["backward"] = BackwardTransition;
+export const SlideOverFromBottom = {
+    from: { opacity: 1, transform: 'translate3d(0, 100%, 0)', zIndex: 20 },
+    enter: { opacity: 1, transform: 'translate3d(0, 0, 0)', zIndex: 20 },
+    leave: { opacity: 0.9, transform: 'translate3d(0, 0, 0)', zIndex: 0 },
+}
 
-export function getTransition(name) {
-    if (name != null) {
-        return transitions[name];
-    }
-    return transitions[Transition.BACKWARD];
+export const SlideDown = {
+    from: { opacity: 1, transform: 'translate3d(0, 0, 0)', zIndex: 20 },
+    enter: { opacity: 1, transform: 'translate3d(0, 0, 0)', zIndex: 0 },
+    leave: { opacity: 1, transform: 'translate3d(0, 100%, 0)', zIndex: 20 },
 }

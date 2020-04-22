@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from "react-router-dom";
-import { Transition } from '../transitions/transitions';
+import { SlideLeft } from '../transitions/transitions';
 import ArrowWhite from '../icons/arrow_white.svg';
 
 function LandingPage() {
@@ -30,7 +30,7 @@ function LandingPage() {
                     <Link className="button" to={{
                         pathname: '/01',
                         state: {
-                            transition: Transition.FORWARD
+                            transition: SlideLeft
                         }
                     }}>Los geht's!</Link>
                 </div>
