@@ -24,7 +24,7 @@ function SurveyFrame({number, question, children, prevPath, nextPath, nextPathIn
                 }}>
                     <img className="left-arrow" src={Arrow} />
                 </Link>
-                <Link className={`backward ${nextPathInactive ? "inactive" : ""}`} to={{
+                <Link className={`backward ${nextPathInactive ? "inactive" : ""}`} to={nextPathInactive ? {} : {
                     pathname: nextPath,
                     state: {
                         transition: SlideLeft
