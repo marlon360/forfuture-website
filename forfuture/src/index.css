@@ -180,6 +180,12 @@ button:hover, a.button:hover, button.on {
     color: white;
     cursor: pointer;
 }
+a {
+  transition: opacity 300ms;
+}
+a.inactive {
+  opacity: 0.2;
+}
 
 .survey {
     background-color: #e8e8e8;

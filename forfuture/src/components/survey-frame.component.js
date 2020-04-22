@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import Arrow from '../icons/arrow.svg';
 import { SlideRight, SlideLeft } from '../transitions/transitions';
 
-function SurveyFrame({number, question, children, prevPath, nextPath}) {
+function SurveyFrame({number, question, children, prevPath, nextPath, nextPathInactive}) {
 
     return (
         <div className="survey">
@@ -24,7 +24,7 @@ function SurveyFrame({number, question, children, prevPath, nextPath}) {
                 }}>
                     <img className="left-arrow" src={Arrow} />
                 </Link>
-                <Link className="backward" to={{
+                <Link className={`backward ${nextPathInactive ? "inactive" : ""}`} to={{
                     pathname: nextPath,
                     state: {
                         transition: SlideLeft

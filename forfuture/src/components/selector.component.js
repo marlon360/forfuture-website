@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 
-function SelectorComponent({items, onChange, size}) {
+function SelectorComponent({items, onChange, size, value}) {
 
     // default
     size = size ? size : "medium";
 
-    const [selected, setSelected] = useState(-1);
+    const [selected, setSelected] = useState(value != null ? value : -1);
 
     const select = (index) => {
         setSelected(index);
