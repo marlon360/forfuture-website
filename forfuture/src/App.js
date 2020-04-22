@@ -1,10 +1,8 @@
 import React from 'react';
-import logo from './logo.svg';
 import {
   BrowserRouter as Router,
-  useParams,useLocation,
+  useLocation,
   Route,
-  Link
 } from "react-router-dom";
 import { AnimatedSwitch } from 'react-router-transition';
 
