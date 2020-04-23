@@ -6,7 +6,7 @@ import { useLocalStorage } from '../utils/localStorage';
 function Survey01Page() {
 
     const key = "age";
-    const items = ["-16", "16", "17", "18", "19", "19+"]
+    const items = ["16", "17", "18", "19"]
 
     const [value, setValue] = useLocalStorage(key);
 

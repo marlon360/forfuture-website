@@ -1,19 +1,23 @@
 import React from 'react';
 import SurveyFrame from '../components/survey-frame.component';
 import SelectorComponent from '../components/selector.component';
+import DndListComponent from '../components/dnd-list.component';
+import { useLocalStorage } from '../utils/localStorage';
 
 function Survey05Page() {
 
-    const items = ["Ja", "Nein"]
+    const items = ["Wirtschaft", "Gesundheit", "Umwelt", "Demokratie", "Bildung"]
+
+    const [futureList, setFutureList] = useLocalStorage("futurelist", items);
 
     const onChange = (evt) => {
-        
+        setFutureList(evt.items);
     }
 
     return (
-        <SurveyFrame number="05/12" question={<>Was wünschst du dir für <span class="underline">unsere</span> Zukunft in <span class="underline">Deutschland?</span></>} prevPath="/04" nextPath="/06">
-            <p>Bessere Bildung, Förderung von Digitalisierung, sozialem Ausgleich, Eiscreme for free jeden Donnerstag nach 16 Uhr…</p>
-            <textarea></textarea>
+        <SurveyFrame number="05/12" question="WIE BEWERTEST DU DIESE DINGE IN HINBLICK AUF DIE ZUKUNFT DEUTSCHLAND?" prevPath="/04" nextPath="/06">
+            <p>Ordne nach Priorität</p>
+            <DndListComponent onChange={onChange} items={futureList}></DndListComponent>
         </SurveyFrame>
     );
 }

@@ -6,7 +6,7 @@ import { useLocalStorage } from '../utils/localStorage';
 function Survey02Page() {
 
     const key = "sex";
-    const items = ["Weiblich", "Männlich", "keine Angabe"]
+    const items = ["Weiblich", "Männlich", "Divers", "keine Angabe"]
 
     const [value, setValue] = useLocalStorage(key);
 

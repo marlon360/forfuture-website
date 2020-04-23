@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-function SliderComponent({min, max, value, onChange}) {
+function SliderComponent({min, max, value, onChange, title}) {
 
     const [sliderValue, setSliderValue] = useState(value != null ? value : min);
 
@@ -15,7 +15,10 @@ function SliderComponent({min, max, value, onChange}) {
     return (
         <div className="slider-container">
             <span className="output">{ sliderValue }</span>
-            <input className="slider" onChange={change} value={sliderValue} type="range" min={min} max={max} step="1" />
+            <div style={{width: '100%'}}>
+                <span>{ title ? title : "Slider" }</span>
+                <input className="slider" onChange={change} value={sliderValue} type="range" min={min} max={max} step="1" />
+            </div>
         </div>
     );
 }

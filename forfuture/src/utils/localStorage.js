@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-export function useLocalStorage(key) {
+export function useLocalStorage(key, initial) {
 
     const getState = () => {
         let state = null;
@@ -16,6 +16,10 @@ export function useLocalStorage(key) {
         if (!state) {
             window.localStorage.setItem("for-future-state", JSON.stringify({}));
             state = {};
+        }
+        if (initial != null && state[key] == null) {
+            state[key] = initial;
+            window.localStorage.setItem("for-future-state", JSON.stringify(state));
         }
         // Parse stored json or if none return initialValue
         return state[key];

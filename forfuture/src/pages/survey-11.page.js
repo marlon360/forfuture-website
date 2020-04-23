@@ -1,24 +1,25 @@
 import React from 'react';
 import SurveyFrame from '../components/survey-frame.component';
 import SelectorComponent from '../components/selector.component';
+import { useLocalStorage } from '../utils/localStorage';
 
 function Survey11Page() {
 
-    const items = ["Ja", "Nein"]
+    const [value, setValue] = useLocalStorage("sustainabilityactions");
 
     const onChange = (evt) => {
-        
+        setValue(evt.target.value)
     }
 
     return (
-        <SurveyFrame number="11/12" question="Was tust du, um einen Unterschied zu machen?" prevPath="/10" nextPath="/12">
+        <SurveyFrame number="11/12" question={<>Was tust du <span className="underline">genau</span>, um nachhaltig zu sein?</>} prevPath="/10" nextPath="/12">
             <p>
                 Ich verzichte auf…<br/>
                 Ich mache…<br/>
                 Ich engagiere mich für…<br/>
                 Sonstiges…
             </p>
-            <textarea data-state="difference"></textarea>
+            <textarea value={value} onChange={onChange}></textarea>
         </SurveyFrame>
     );
 }

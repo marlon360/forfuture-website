@@ -1,18 +1,21 @@
 import React from 'react';
 import SurveyFrame from '../components/survey-frame.component';
 import SelectorComponent from '../components/selector.component';
+import { useLocalStorage } from '../utils/localStorage';
 
 function Survey07Page() {
 
-    const items = ["Ja", "Nein"]
+    const items = ["Extrem bedrohlich", "Real und kritisch", "Real", "Da, aber übertrieben dargestellt", "Welcher Klimawandel?"]
+
+    const [value, setValue] = useLocalStorage("climatechange");
 
     const onChange = (evt) => {
-        
+        setValue(evt.item)
     }
 
     return (
-        <SurveyFrame number="07/12" question="Die Zukunft zu gestalten, kann auch schon in der Jetzt-Zeit beginnen. Du gehst zum Beispiel in die Schule, um in (einer etwas entfernten) Zukunft einen coolen Job zu haben…" prevPath="/06a" nextPath="/07b">
-
+        <SurveyFrame number="07/12" question="FÜR WIE REAL UND BEDROHLICH HÄLST DU DEN KLIMAWANDEL?  " prevPath="/06a" nextPath="/08" nextPathInactive={items.indexOf(value) < 0}>
+            <SelectorComponent size="full" value={items.indexOf(value)} onChange={onChange} items={items}></SelectorComponent>
         </SurveyFrame>
     );
 }

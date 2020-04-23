@@ -1,18 +1,21 @@
 import React from 'react';
 import SurveyFrame from '../components/survey-frame.component';
 import SelectorComponent from '../components/selector.component';
+import { useLocalStorage } from '../utils/localStorage';
 
 function Survey06Page() {
 
-    const items = ["Ja", "Nein"]
+    const items = ["Sehr wahrscheinlich", "Schon", "Naja", "Eher nicht", "Gar nicht"]
+
+    const [value, setValue] = useLocalStorage("change");
 
     const onChange = (evt) => {
-        
+        setValue(evt.item)
     }
 
     return (
-        <SurveyFrame number="06/12" question=".…und was sollte man deiner Meinung nach einschränken bzw. unterlassen?" prevPath="/05" nextPath="/06a">
-            <textarea data-state="restrictions"></textarea>
+        <SurveyFrame number="06/12" question="GLAUBST DU, DASS DU IN DEINER AKTUELLEN (NICHT CORONA-ZEIT) POSITION, ETWAS FÜR UNSERE ZUKUNFT VERÄNDERN KANNST?" prevPath="/05" nextPath="/06a" nextPathInactive={items.indexOf(value) < 0}>
+            <SelectorComponent size="full" value={items.indexOf(value)} onChange={onChange} items={items}></SelectorComponent>
         </SurveyFrame>
     );
 }
