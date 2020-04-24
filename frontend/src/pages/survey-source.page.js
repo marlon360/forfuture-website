@@ -9,12 +9,22 @@ function SurveyFinishedPage() {
 
     const [value, setValue] = useLocalStorage("source");
 
+    const [sustainabilityeveryday, setSustainabilityeveryday] = useLocalStorage("sustainabilityeveryday");
+
     const onChange = (evt) => {
         setValue(evt.item)
     }
 
+    const getPrevPath = () => {
+        if (sustainabilityeveryday == "Ja") {
+            return "/12"
+        } else {
+            return "/12-skip"
+        }
+    }
+
     return (
-        <SurveyFrame number="NOCH EIN LETZTES:" question="Wie hast du von dieser Umfrage erfahren?" prevPath="/12" nextPath="/finished" nextPathInactive={items.indexOf(value) < 0}>
+        <SurveyFrame number="NOCH EIN LETZTES:" question="Wie hast du von dieser Umfrage erfahren?" prevPath={getPrevPath()} nextPath="/finished" nextPathInactive={items.indexOf(value) < 0}>
             <SelectorComponent value={items.indexOf(value)} size="large" onChange={onChange} items={items}></SelectorComponent>
         </SurveyFrame>
     );
