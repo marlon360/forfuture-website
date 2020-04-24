@@ -32,6 +32,7 @@ import Survey12SkipPage from './pages/survey-12-skip.page';
 import SurveyFinishedPage from './pages/survey-finished.page';
 import SurveySourcePage from './pages/survey-source.page';
 import SurveySorryPage from './pages/survey-sorry.page';
+import WorkshopInfoPage from './pages/workshop-info.page';
 
 function App() {
 
@@ -75,6 +76,7 @@ function App() {
               <Route path="/0407-skip" component={Survey0407SkipPage}/>
               <Route path="/12-skip" component={Survey12SkipPage}/>
               <Route path="/sorry" component={SurveySorryPage}/>
+              <Route path="/workshop-info" component={WorkshopInfoPage}/>
               <Route exact path="/">
                 <LandingPage/>
               </Route>
