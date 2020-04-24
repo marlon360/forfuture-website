@@ -1,6 +1,7 @@
 import React from 'react';
 import SurveyFrame from '../components/survey-frame.component';
 import SelectorComponent from '../components/selector.component';
+import Dog from '../images/dog.gif';
 
 function Survey06aPage() {
 
@@ -12,10 +13,7 @@ function Survey06aPage() {
 
     return (
         <SurveyFrame number="NOCH DA?" question="" prevPath="/06" nextPath="/07">
-            <div>
-                <iframe src="https://giphy.com/embed/X8lpsy3YBcIJW" width="100%" height="100%" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
-            </div>
-            <p><a href="https://giphy.com/gifs/X8lpsy3YBcIJW">via GIPHY</a></p>
+            <img className="gif" src={Dog}/>
         </SurveyFrame>
     );
 }
