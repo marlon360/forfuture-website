@@ -10,6 +10,7 @@ import { CrossFade } from './transitions/transitions'
 
 import LandingPage from './pages/landing.page';
 import PolicyPage from './pages/policy.page';
+import PolicyDetailPage from './pages/policy-detail.page';
 import Survey01Page from './pages/survey-01.page';
 import Survey02Page from './pages/survey-02.page';
 import Survey03Page from './pages/survey-03.page';
@@ -52,6 +53,7 @@ function App() {
         <animated.div className="page" key={key} style={props}>
           <Switch location={item}>
               <Route path="/policy" component={PolicyPage}/>
+              <Route path="/policy-detail" component={PolicyDetailPage}/>
               <Route path="/01" component={Survey01Page}/>
               <Route path="/02" component={Survey02Page}/>
               <Route path="/03" component={Survey03Page}/>

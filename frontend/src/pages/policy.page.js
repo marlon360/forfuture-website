@@ -18,7 +18,12 @@ function PolicyPage() {
                 <div className="top">
                     <span className="title">DATENSCHUTZ</span>
                     <p>
-                    Bevor wir starten, musst du noch folgendes wissen: Deine Antworten sind <span className="underline">anonymisiert</span> und werden ausschließlich im Rahmen des Projektes ausgewertet . Nach Beenden der Bachelorarbeit, werden diese wieder gelöscht. Weitere Infos zum Datenschutz findest du hier. 
+                    Bevor wir starten, musst du noch folgendes wissen: Deine Antworten sind <span className="underline">anonymisiert</span> und werden ausschließlich im Rahmen des Projektes ausgewertet . Nach Beenden der Bachelorarbeit, werden diese wieder gelöscht. Weitere Infos zum Datenschutz findest du <Link className="backward" to={{
+                        pathname: "/policy-detail",
+                        state: {
+                            transition: SlideLeft
+                        }
+                    }}>hier</Link>. 
                     </p>
                     <p>
                         Außerdem werden Cookies benutzt, allerdings NICHT um deine Daten zu tracken, sondern, um dir innerhalb dieser Umfrage einen angenehmeren Umgang zu schaffen (Datenschutz). 
