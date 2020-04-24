@@ -5,14 +5,11 @@ import Dog from '../images/dog.gif';
 
 function Survey06aPage() {
 
-    const items = ["Ja", "Nein"]
+    const header = <span style={{"text-align": "center", "display": "block", "width": "100%"}}>NOCH DA?</span>;
 
-    const onChange = (evt) => {
-        
-    }
 
     return (
-        <SurveyFrame number="NOCH DA?" question="" prevPath="/06" nextPath="/07">
+        <SurveyFrame number={header} question="" prevPath="/06" nextPath="/07">
             <img className="gif" src={Dog}/>
         </SurveyFrame>
     );
