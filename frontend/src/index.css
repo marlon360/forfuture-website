@@ -192,8 +192,8 @@ a.inactive {
 }
 
 .survey {
-    background-color: #e8e8e8;
-    background-image: url('./images/white-bg.jpg');
+    background-color: #efedea;
+    /* background-image: url('./images/white-bg.jpg'); */
     background-size: cover;
 
     min-height: 100vh;
