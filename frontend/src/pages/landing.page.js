@@ -1,9 +1,23 @@
-import React from 'react';
+import React, { useRef }  from 'react';
 import { Link } from "react-router-dom";
 import { SlideLeft, SlideOverFromBottom } from '../transitions/transitions';
 import ArrowWhite from '../icons/arrow_white.svg';
+import {useSpring} from 'react-spring';
 
 function LandingPage() {
+
+    const scrollDestinationRef = useRef();
+
+  const [y, setY] = useSpring(() => ({
+    reset: true,
+    y: 0,
+    onFrame: props => {
+        document.querySelector(".page").scroll(0, props.y);
+    },
+    config: { duration: 700 }
+  }));
+
+
   return (
     <div>
         <div className="landing">
@@ -11,11 +25,13 @@ function LandingPage() {
                 <h1>Cool, dass du dir einen Moment Zeit nimmst!</h1>
                 <p>Du bist zwischen <span className="underline">16 und 19 Jahre</span> alt und ein generell interessierter Mensch? Dann ist das hier eine Umfrage an dich.</p>
             </div>
-            <div className="bounce arrow-wrapper">
+            <div style={{cursor: "pointer"}} onClick={() => { 
+          setY({ y: scrollDestinationRef.current.getBoundingClientRect().bottom, from: { y: document.querySelector(".page").scrollTop }, });
+        }} className="bounce arrow-wrapper">
                 <img className="arrow" src={ArrowWhite}/>
             </div>
         </div>
-        <div className="landing2">
+        <div ref={scrollDestinationRef} className="landing2">
             <div className="landing2-content">
                 <div className="top">
                     <span className="title">HEY!</span>
