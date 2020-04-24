@@ -1,13 +1,19 @@
 import React from 'react';
 import SurveyFrame from '../components/survey-frame.component';
 import SelectorComponent from '../components/selector.component';
+import { Submit } from '../services/submit.service';
+import {
+    withRouter
+  } from 'react-router-dom'
 
-function SurveyFinishedPage() {
+function SurveyFinishedPage(props) {
 
-    const items = ["Ja", "Nein"]
-
-    const onChange = (evt) => {
-
+    const SubmitForm = () => {
+        Submit().then(() => {
+            props.history.push('/after-submit')
+        }).catch((error) => {
+            alert(error);
+        })
     }
 
     return (
@@ -18,10 +24,10 @@ function SurveyFinishedPage() {
             </div>
             <div class="bottom">
                 <p>Jetzt endgültig</p>
-                <a class="button" href="#">Antworten abschicken!</a>
+                <a class="button" onClick={SubmitForm} href="#">Antworten abschicken!</a>
             </div>
         </div>
     );
 }
 
-export default SurveyFinishedPage;
+export default withRouter(SurveyFinishedPage);
