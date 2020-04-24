@@ -28,7 +28,7 @@ function LandingPage() {
                 <div className="bottom">
                     <p>Habe ich verstanden.</p>
                     <Link className="button" to={{
-                        pathname: '/01',
+                        pathname: '/policy',
                         state: {
                             transition: SlideOverFromBottom
                         }
