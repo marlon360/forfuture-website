@@ -376,7 +376,7 @@ span.output {
     align-items: center;
 
     border-radius: 10px;
-    border: solid 2px #c0c0c0;
+    border: solid 2px var(--dark);
 
     padding: 0.6em 1em;
     width: 80%;
@@ -390,7 +390,7 @@ span.output {
 
     margin-bottom: 0.4em;
 
-    background: rgb(255, 255, 255);
+    background: rgb(255, 255, 255, 0.92);
   }
 
   .draggable-item img {
