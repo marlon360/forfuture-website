@@ -31,9 +31,8 @@ body {
     background-image: url('./images/gradient.jpg');
     background-size: cover;
 
-    height: 100vh;
+    height: auto;
     min-height: 100vh;
-    height: calc(var(--vh, 1vh) * 100);
     min-height: calc(var(--vh, 1vh) * 100);
     padding: 1.4em;
     max-width: 1000px;
@@ -107,9 +106,8 @@ p {
     background-image: url('./images/white-bg.jpg');
     background-size: cover;
 
-    height: 100vh;
     min-height: 100vh;
-    height: calc(var(--vh, 1vh) * 100);
+    height: auto;
     min-height: calc(var(--vh, 1vh) * 100);
     padding: 1.4em;
 
