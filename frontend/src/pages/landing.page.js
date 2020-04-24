@@ -9,7 +9,7 @@ function LandingPage() {
         <div className="landing">
             <div className="landing-content">
                 <h1>Cool, dass du dir einen Moment Zeit nimmst!</h1>
-                <p>Du bist zwischen <span className="underline">15 und 19 Jahre</span> alt und ein generell interessierter Mensch? Dann ist <span className="underline">das hier</span> eine Umfrage an dich.</p>
+                <p>Du bist zwischen <span className="underline">16 und 19 Jahre</span> alt und ein generell interessierter Mensch? Dann ist das hier eine Umfrage an dich.</p>
             </div>
             <div className="bounce arrow-wrapper">
                 <img className="arrow" src={ArrowWhite}/>
@@ -20,9 +20,7 @@ function LandingPage() {
                 <div className="top">
                     <span className="title">HEY!</span>
                     <p>
-                        Das ausfüllen dauert ungefähr zehn Minuten. Bitte beantworte alle Fragen ehrlich. Sie sind Teil einer Forschungsarbeit und sollen deswegen so wahrheitsgemäß wie möglich sein. Vor allem DEINE Meinung ist gefragt, es gibt also kein Richtig oder Falsch.<br/> 
-                        <br/>
-                        Alle deine Antworten sind anonym verschlüsselt. Du brauchst dir keine Sorge wegen der Speicherung oder weitergabe an Dritte machen.
+                    Das Ausfüllen dauert ungefähr <span className="underline">zehn Minuten</span>. Bitte beantworte die Fragen ehrlich! Sie sind wissenschaftliche Grundlage einer Bachelorarbeit namens »_forfuture». Vor allem DEINE Meinung ist gefragt, es gibt also <span className="underline">kein</span> Richtig oder Falsch. 
                     </p>
                 </div>
                 <div className="bottom">
