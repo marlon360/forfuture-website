@@ -2,7 +2,7 @@ import React from 'react';
 import SurveyFrame from '../components/survey-frame.component';
 import SelectorComponent from '../components/selector.component';
 
-function Survey07bPage() {
+function Survey0407SkipPage() {
 
     const items = ["Ja", "Nein"]
 
@@ -11,10 +11,10 @@ function Survey07bPage() {
     }
 
     return (
-        <SurveyFrame number="07/12" question="…Fällt dir noch etwas ein, wie du gerade in deine Zukunft investierst?" prevPath="/07" nextPath="/08">
-            <textarea data-state="future-investments"></textarea>
+        <SurveyFrame number="DU ALTER ÜBERFLIEGER!" question="Frage 4 bis 7 werden aufgrund deiner Antwort übersprungen." prevPath="/03" nextPath="/08">
+            <p>Klick weiter!</p>
         </SurveyFrame>
     );
 }
 
-export default Survey07bPage;
+export default Survey0407SkipPage;

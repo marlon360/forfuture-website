@@ -9,6 +9,8 @@ function Survey08Page() {
 
     const [value, setValue] = useLocalStorage("sustainability");
 
+    const [future, setFuture] = useLocalStorage("future");
+
     const onChange = (evt) => {
         setValue(evt.item)
     }
@@ -20,9 +22,16 @@ function Survey08Page() {
             return "/09b"
         }
     }
+    const getPrevPath = () => {
+        if (future == "Ja") {
+            return "/07"
+        } else {
+            return "/0407-skip"
+        }
+    }
 
     return (
-        <SurveyFrame number="08/12" question={<>Interessierst du dich für das Thema <span className="underline">Nachhaltigkeit</span>?</>} prevPath="/07" nextPath={getNextPath()} nextPathInactive={items.indexOf(value) < 0}>
+        <SurveyFrame number="08/12" question={<>Interessierst du dich für das Thema <span className="underline">Nachhaltigkeit</span>?</>} prevPath={getPrevPath()} nextPath={getNextPath()} nextPathInactive={items.indexOf(value) < 0}>
             <SelectorComponent onChange={onChange} value={items.indexOf(value)} items={items}></SelectorComponent>
         </SurveyFrame>
     );

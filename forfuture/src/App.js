@@ -17,7 +17,6 @@ import Survey05Page from './pages/survey-05.page';
 import Survey06Page from './pages/survey-06.page';
 import Survey06aPage from './pages/survey-06a.page';
 import Survey07Page from './pages/survey-07.page';
-import Survey07bPage from './pages/survey-07b.page';
 import Survey08Page from './pages/survey-08.page';
 import Survey09Page from './pages/survey-09.page';
 import Survey09bPage from './pages/survey-09b.page';
@@ -26,6 +25,7 @@ import Survey11Page from './pages/survey-11.page';
 import Survey11bPage from './pages/survey-11b.page';
 import Survey12Page from './pages/survey-12.page';
 import Survey1011SkipPage from './pages/survey-1011-skip.page';
+import Survey0407SkipPage from './pages/survey-0407-skip.page';
 import Survey12SkipPage from './pages/survey-12-skip.page';
 import SurveyFinishedPage from './pages/survey-finished.page';
 import SurveySourcePage from './pages/survey-source.page';
@@ -58,7 +58,6 @@ function App() {
               <Route path="/06" component={Survey06Page}/>
               <Route path="/06a" component={Survey06aPage}/>
               <Route path="/07" component={Survey07Page}/>
-              <Route path="/07b" component={Survey07bPage}/>
               <Route path="/08" component={Survey08Page}/>
               <Route path="/09" component={Survey09Page}/>
               <Route path="/09b" component={Survey09bPage}/>
@@ -69,6 +68,7 @@ function App() {
               <Route path="/source" component={SurveySourcePage}/>
               <Route path="/finished" component={SurveyFinishedPage}/>
               <Route path="/1011-skip" component={Survey1011SkipPage}/>
+              <Route path="/0407-skip" component={Survey0407SkipPage}/>
               <Route path="/12-skip" component={Survey12SkipPage}/>
               <Route path="/sorry" component={SurveySorryPage}/>
               <Route exact path="/">
