@@ -4,8 +4,64 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9f99977b6c116e0f4b83e83371e7f7b5",
+    "content-hash": "07d0b0cb666171f271e5a7f393528294",
     "packages": [
+        {
+            "name": "faapz/pdo",
+            "version": "v2.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/FaaPz/PDO.git",
+                "reference": "4bf3d594b604f0de9f628f8824d411a6c1160639"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/FaaPz/PDO/zipball/4bf3d594b604f0de9f628f8824d411a6c1160639",
+                "reference": "4bf3d594b604f0de9f628f8824d411a6c1160639",
+                "shasum": ""
+            },
+            "require": {
+                "ext-pdo": "*",
+                "php": ">=7.2.0"
+            },
+            "require-dev": {
+                "phan/phan": "^2.2",
+                "phpunit/phpunit": "^8",
+                "squizlabs/php_codesniffer": "3.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "FaaPz\\PDO\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabian de Laender",
+                    "email": "fabian@faapz.productions",
+                    "homepage": "https://faapz.productions",
+                    "role": "Owner"
+                },
+                {
+                    "name": "Alexander Barker",
+                    "email": "alex@1stleg.com",
+                    "homepage": "https://github.com/kwhat/",
+                    "role": "Collaborator"
+                }
+            ],
+            "description": "Just another PDO database library",
+            "homepage": "https://github.com/FaaPz/PDO",
+            "keywords": [
+                "database",
+                "pdo",
+                "sql"
+            ],
+            "time": "2020-01-22T05:57:29+00:00"
+        },
         {
             "name": "phpoption/phpoption",
             "version": "1.7.3",

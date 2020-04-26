@@ -1,6 +1,15 @@
 <IfModule mod_rewrite.c>
     RewriteEngine On
     RewriteBase /
+
+    RewriteCond %{REQUEST_METHOD} POST
+    RewriteRule ^/?api/$ /backend/api/ [R=307,L]
+    RewriteRule ^/?api/(.*)$ /backend/api/$1 [R=307,L]
+
+    RewriteCond %{REQUEST_METHOD} GET
+    RewriteRule ^/?api/$ /backend/api/ [R=302,L]
+    RewriteRule ^/?api/(.*)$ /backend/api/$1 [R=302,L]
+
     RewriteRule ^index\.html$ - [L]
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteCond %{REQUEST_FILENAME} !-d
