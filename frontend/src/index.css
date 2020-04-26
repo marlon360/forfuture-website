@@ -35,7 +35,7 @@ body {
     min-height: 100vh;
     min-height: -webkit-fill-available;
     padding: 1.4em;
-    max-width: 700px;
+    max-width: 550px;
     margin: auto;
 
     display: flex;
@@ -53,7 +53,7 @@ body {
 }
 
 .landing-content, .finished-content {
-    max-width: 600px;
+    max-width: 450px;
     margin: 0 auto;
 }
 
@@ -61,6 +61,7 @@ h1 {
     text-transform: uppercase;
     margin: 0.4em 0 0.1em 0;
     font-size: 9vh;
+    word-wrap: break-word;
     font-weight: bold;
     font-stretch: normal;
     font-style: normal;
@@ -119,7 +120,7 @@ img.arrow {
 }
 
 .landing2-content {
-    max-width: 600px;
+    max-width: 450px;
     margin: 0 auto;
 
     display: flex;
@@ -208,7 +209,7 @@ a.inactive {
 
 .survey-content {
     width: 100%;
-    max-width: 600px;
+    max-width: 450px;
     height: 100%;
     margin: 0 auto;
 }
