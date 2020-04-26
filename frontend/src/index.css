@@ -43,7 +43,13 @@ body {
     justify-content: space-between;
 }
 .finished {
-    background-image: url('./images/gradient-2.jpg');
+    background-image: linear-gradient(to top, #ff7f95 -14%, #ffce98 91%);
+}
+
+.finished a.button {
+    background-color: #fff;
+    color: var(--dark) !important;
+    border: 0px !important;
 }
 
 .landing-content, .finished-content {
@@ -167,7 +173,7 @@ button, a.button {
     font-size: 1em;
     font-weight: bold;
     text-decoration: none;
-    color: black;
+    color: var(--dark);
     text-align: center;
 
     background: transparent;
