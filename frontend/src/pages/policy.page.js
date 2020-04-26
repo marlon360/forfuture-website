@@ -21,7 +21,8 @@ function PolicyPage() {
                     Bevor wir starten, musst du noch folgendes wissen: Deine Antworten sind <span className="underline">anonymisiert</span> und werden ausschließlich im Rahmen des Projektes ausgewertet . Nach Beenden der Bachelorarbeit, werden diese wieder gelöscht. Weitere Infos zum Datenschutz findest du <Link className="backward" to={{
                         pathname: "/policy-detail",
                         state: {
-                            transition: SlideLeft
+                            transition: SlideLeft,
+                            backLink: "/policy"
                         }
                     }}>hier</Link>. 
                     </p>

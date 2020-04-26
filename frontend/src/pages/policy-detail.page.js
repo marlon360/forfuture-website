@@ -1,10 +1,20 @@
 import React, { useState } from 'react';
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { SlideRight } from '../transitions/transitions';
 import { useLocalStorage } from '../utils/localStorage';
 import Arrow from '../icons/arrow.svg';
 
 function PolicyDetailPage() {
+
+    const location = useLocation();
+
+    const getBackLink = () => {
+        if (location.state && location.state.backLink) {
+            return location.state.backLink;
+        } else {
+            return "/policy"
+        }
+    }
 
   return (
     <div>
@@ -12,7 +22,7 @@ function PolicyDetailPage() {
             <div className="landing2-content">
                 <div className="top">
                     <Link className="backward" to={{
-                        pathname: "/policy",
+                        pathname: getBackLink(),
                         state: {
                             transition: SlideRight
                         }
