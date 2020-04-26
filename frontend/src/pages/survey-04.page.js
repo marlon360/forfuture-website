@@ -6,13 +6,13 @@ import { useLocalStorage } from '../utils/localStorage';
 
 function Survey04Page() {
 
-    const [democracy, setDemocracy] = useLocalStorage("democracy", 3);
-    const [money, setMoney] = useLocalStorage("money", 3);
-    const [success, setSuccess] = useLocalStorage("success", 3);
-    const [education, setEducation] = useLocalStorage("education", 3);
-    const [health, setHealth] = useLocalStorage("health", 3);
-    const [environment, setEnvironment] = useLocalStorage("environment", 3);
-    const [family, setFamily] = useLocalStorage("family", 3);
+    const [democracy, setDemocracy] = useLocalStorage("democracy", 1);
+    const [money, setMoney] = useLocalStorage("money", 1);
+    const [success, setSuccess] = useLocalStorage("success", 1);
+    const [education, setEducation] = useLocalStorage("education", 1);
+    const [health, setHealth] = useLocalStorage("health", 1);
+    const [environment, setEnvironment] = useLocalStorage("environment", 1);
+    const [family, setFamily] = useLocalStorage("family", 1);
 
     const onChangeMoney = (evt) => {
         setMoney(evt.value);

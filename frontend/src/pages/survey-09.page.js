@@ -6,7 +6,7 @@ import { useLocalStorage } from '../utils/localStorage';
 
 function Survey09Page() {
 
-    const [sustainabilityScale, setSustainabilityScale] = useLocalStorage("sustainabilityscale", 3);
+    const [sustainabilityScale, setSustainabilityScale] = useLocalStorage("sustainabilityscale", 1);
 
     const onChange = (evt) => {
         setSustainabilityScale(evt.value);
