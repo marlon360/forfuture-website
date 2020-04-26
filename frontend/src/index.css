@@ -28,19 +28,27 @@ body {
 }
 
 .landing, .finished {
-    background-image: url('./images/gradient.jpg');
-    background-size: cover;
+    background-image: url('./images/bg.jpg');
+    /* background-size: cover; */
+    background-position: 90% top;
+    background-size: 2000px;
+    background-repeat: no-repeat;
 
     height: auto;
     min-height: 100vh;
     min-height: -webkit-fill-available;
     padding: 1.4em;
-    max-width: 850px;
+    max-width: 1250px;
     margin: auto;
 
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+@media only screen and (min-height: 800px) {
+    .landing, .finished {
+        background-size: cover;
+    }
 }
 .finished {
     background-image: linear-gradient(to top, #ff7f95 -14%, #ffce98 91%);
@@ -53,7 +61,7 @@ body {
 }
 
 .landing-content, .finished-content {
-    max-width: 500px;
+    max-width: 700px;
     margin: 0 auto;
 }
 
@@ -68,6 +76,11 @@ h1 {
     line-height: 0.94;
     letter-spacing: 0.2px;
     color: var(--light);
+}
+@media only screen and (min-height: 800px) {
+    h1 {
+        font-size: 6em;
+    }
 }
 
 p {
