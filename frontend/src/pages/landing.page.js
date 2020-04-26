@@ -36,7 +36,9 @@ function LandingPage() {
                 <div className="top">
                     <span className="title">HEY!</span>
                     <p>
-                    Das Ausfüllen dauert ungefähr <span className="underline">zehn Minuten</span>. Bitte beantworte die Fragen ehrlich! Sie sind wissenschaftliche Grundlage einer Bachelorarbeit namens »_forfuture». Vor allem DEINE Meinung ist gefragt, es gibt also <span className="underline">kein</span> Richtig oder Falsch. 
+                    Das Ausfüllen dauert ungefähr <span className="underline">zehn Minuten</span>. Bitte beantworte die Fragen ehrlich! Sie sind wissenschaftliche Grundlage einer Bachelorarbeit namens »_forfuture». »_forfuture» geht um die Präsenz von Zukunft und stärkerer Integierung von Nachhaltigkeit in unseren alltäglichen Routinen. <br/>
+                    <br/>
+                    Vor allem DEINE Meinung ist gefragt, es gibt also <span className="underline">kein</span> Richtig oder Falsch.
                     </p>
                 </div>
                 <div className="bottom">
