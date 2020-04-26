@@ -15,7 +15,7 @@ function Survey05Page() {
     }
 
     return (
-        <SurveyFrame number="05/12" question="WIE BEWERTEST DU DIESE DINGE IN HINBLICK AUF DIE ZUKUNFT IN DEUTSCHLAND?" prevPath="/04" nextPath="/06">
+        <SurveyFrame number="05/12" question={<>WIE BEWERTEST <span class="underline">DU</span> DIESE DINGE IN HINBLICK AUF DIE ZUKUNFT IN DEUTSCHLAND?</>} prevPath="/04" nextPath="/06">
             <p>Ordne nach Priorität.<br/>
             Die wichtigste Priorität steht an oberster Stelle.</p>
             <DndListComponent onChange={onChange} items={futureList}></DndListComponent>
