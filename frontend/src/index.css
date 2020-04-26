@@ -33,12 +33,10 @@ body {
 
     height: auto;
     min-height: 100vh;
-    min-height: calc(var(--vh, 1vh) * 100);
+    min-height: -webkit-fill-available;
     padding: 1.4em;
     max-width: 700px;
     margin: auto;
-
-    box-sizing: border-box;
 
     display: flex;
     flex-direction: column;
@@ -107,13 +105,11 @@ img.arrow {
 
     min-height: 100vh;
     height: auto;
-    min-height: calc(var(--vh, 1vh) * 100);
+    min-height: -webkit-fill-available;
     padding: 1.4em;
 
     display: flex;
     align-items: stretch;
-
-    box-sizing: border-box;
 }
 
 .landing2-content {
@@ -196,11 +192,9 @@ a.inactive {
     background-size: cover;
 
     min-height: 100vh;
-    min-height: calc(var(--vh, 1vh) * 100);
+    min-height: -webkit-fill-available;
     padding: 1.4em;
-
-    box-sizing: border-box;
-
+    
     display: flex;
     flex-direction: column;
     justify-content: space-between;
