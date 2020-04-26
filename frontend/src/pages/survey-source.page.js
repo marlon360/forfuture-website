@@ -16,10 +16,10 @@ function SurveyFinishedPage() {
     }
 
     const getPrevPath = () => {
-        if (sustainabilityeveryday == "Ja") {
-            return "/12"
-        } else {
+        if (sustainabilityeveryday === "Nie") {
             return "/12-skip"
+        } else {
+            return "/12"
         }
     }
 

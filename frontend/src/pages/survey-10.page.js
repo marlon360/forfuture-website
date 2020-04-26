@@ -6,7 +6,7 @@ import { useLocalStorage } from '../utils/localStorage';
 
 function Survey10Page() {
 
-    const items = ["Ja", "Nein"]
+    const items = ["Immer", "Meistens", "Manchmal", "Es geht", "Nie"]
 
     const [value, setValue] = useLocalStorage("sustainabilityeveryday");
 
@@ -15,10 +15,10 @@ function Survey10Page() {
     }
 
     const getNextPath = () => {
-        if (value == "Ja") {
-            return "/11"
-        } else {
+        if (value == "Nie") {
             return "/11b"
+        } else {
+            return "/11"
         }
     }
 
