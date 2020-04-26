@@ -3,7 +3,7 @@ import React from 'react';
 function SurveySorryPage() {
 
     return (
-        <div class="finished sorry">
+        <div id="sorry" class="finished sorry">
             <div class="finished-content">
                 <h1>Sorry!</h1>
                 <p>

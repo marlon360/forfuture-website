@@ -27,7 +27,7 @@ body {
   overflow: auto;
 }
 
-.landing, .finished {
+.landing, .finished, #sorry {
     background-image: url('./images/bg.jpg');
     /* background-size: cover; */
     background-position: 90% top;
@@ -52,6 +52,8 @@ body {
 }
 .finished {
     background-image: linear-gradient(to top, #ff7f95 -14%, #ffce98 91%);
+    background-size: initial;
+    background-position: initial;
 }
 
 .finished a.button {
@@ -294,7 +296,7 @@ h2 {
 }
 
 .survey-details button {
-    margin: 0 0 1.3em 0;
+    margin: 0 0 1.1em 0;
     font-weight: normal;
     font-size: 0.9em;
     line-height: 1.33;

@@ -6,7 +6,7 @@ import { useLocalStorage } from '../utils/localStorage';
 function Survey01Page() {
 
     const key = "age";
-    const items = ["16", "17", "18", "19"]
+    const items = ["-16", "16", "17", "18", "19", "19+"]
 
     const [value, setValue] = useLocalStorage(key);
 
@@ -14,8 +14,16 @@ function Survey01Page() {
         setValue(evt.item)
     }
 
+    const getNextPage = () => {
+        if (value === "-16" || value === "19+") {
+            return "/sorry"
+        } else {
+            return "/02"
+        }
+    }
+
     return (
-        <SurveyFrame number="01/12" question="Wie alt bist du?" prevPath="/policy" nextPath="/02" nextPathInactive={items.indexOf(value) < 0}>
+        <SurveyFrame number="01/12" question="Wie alt bist du?" prevPath="/policy" nextPath={getNextPage()} nextPathInactive={items.indexOf(value) < 0}>
             <SelectorComponent value={items.indexOf(value)} size="small" onChange={onChange} items={items}></SelectorComponent>
         </SurveyFrame>
     );
