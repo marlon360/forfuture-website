@@ -14,9 +14,9 @@ function Survey11Page() {
     return (
         <SurveyFrame number="11/12" question={<>Was tust du <span className="underline">genau</span>, um nachhaltig zu sein?</>} prevPath="/10" nextPath="/12">
             <p>
-                Ich verzichte auf…<br/>
                 Ich mache…<br/>
                 Ich engagiere mich für…<br/>
+                Ich verzichte auf…<br/>
                 Sonstiges…
             </p>
             <textarea value={value} onChange={onChange}></textarea>
