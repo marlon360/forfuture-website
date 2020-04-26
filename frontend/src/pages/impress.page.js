@@ -46,7 +46,7 @@ function ImpressPage() {
                     <p>
                     Inhaberin dieser Seite ist<br/>
                     Katrin Schulz<br/>
-                    Email:  for.future@posteo.de <br/>
+                    Email:  info@forfuture.studio <br/>
                     <br/>
                     Die Inhalte aller Seiten dieses Informations und Kontaktauftrittes  sind ur­he­ber­rechtlich geschützt.<br/>
                     Alle Bildrechte liegen bei »_forfuture» Katrin Schulz.<br/>
