@@ -9,6 +9,7 @@ import { useTransition, animated } from 'react-spring'
 import { CrossFade } from './transitions/transitions'
 
 import LandingPage from './pages/landing.page';
+import ImpressPage from './pages/impress.page';
 import PolicyPage from './pages/policy.page';
 import PolicyDetailPage from './pages/policy-detail.page';
 import Survey01Page from './pages/survey-01.page';
@@ -56,6 +57,7 @@ function App() {
           <Switch location={item}>
               <Route path="/policy" component={PolicyPage}/>
               <Route path="/policy-detail" component={PolicyDetailPage}/>
+              <Route path="/impress" component={ImpressPage}/>
               <Route path="/01" component={Survey01Page}/>
               <Route path="/02" component={Survey02Page}/>
               <Route path="/03" component={Survey03Page}/>

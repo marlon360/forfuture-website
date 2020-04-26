@@ -416,7 +416,7 @@ span.output {
     height: 60vh;
   }
 
-  #workshop-info img {
+  #workshop-info img, img.center {
       width: 75%;
       max-width: 200px;
       height: auto;
