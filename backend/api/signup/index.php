@@ -73,7 +73,6 @@ ini_set('display_errors', 'on');
                     //Server settings
                     $mail->CharSet = PHPMailer::CHARSET_UTF8;
                     $mail->SetLanguage('de');
-                    $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      // Enable verbose debug output
                     $mail->isSMTP();                                            // Send using SMTP
                     $mail->Host       = getenv('MAIL_HOST');                    // Set the SMTP server to send through
                     $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
