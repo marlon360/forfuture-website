@@ -5,19 +5,28 @@ import { Submit } from '../services/submit.service';
 import {
     withRouter
   } from 'react-router-dom'
+import { useLocalStorage } from '../utils/localStorage';
 
 function SurveyFinishedPage(props) {
 
+    const [submitted, setSubmitted] = useLocalStorage("submitted", false);
+
     const SubmitForm = () => {
-        Submit().then((data) => {
-            if (data.workshop === true) {
-                props.history.push('/workshop-info')
-            } else {
-                props.history.push('/after-submit')
-            }
-        }).catch((error) => {
-            alert(error);
-        })
+        if (!submitted) {
+            Submit().then((data) => {
+                setSubmitted(true);
+                if (data.workshop === true) {
+                    props.history.push('/workshop-info')
+                } else {
+                    props.history.push('/after-submit')
+                }
+            }).catch((error) => {
+                alert(error);
+            })
+        } else {
+            alert("Du hast bereits an der Umfrage teilgenommen! Vielen Dank!")
+            props.history.push('/after-submit')
+        }
     }
 
     return (
