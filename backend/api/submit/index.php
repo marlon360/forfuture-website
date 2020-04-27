@@ -48,7 +48,7 @@ ini_set('display_errors', 'on');
                 }
             }
 
-            $keys = ["age", "sex", "future", "democracy", "money", "success", "education", "health", "environment", "family", "futurelist", "changefuture", "climatechnage", "sustainability", "sustainabilityscale", "nosustainability", "sustainabilityeveryday", "sustainabilityactions", "nosustainabilitymotivation", "sustainabilitymotivation", "source"];
+            $keys = ["age", "sex", "future", "democracy", "money", "success", "education", "health", "environment", "family", "futurelist", "changefuture", "climatechange", "sustainability", "sustainabilityscale", "nosustainability", "sustainabilityeveryday", "sustainabilityactions", "nosustainabilitymotivation", "sustainabilitymotivation", "source"];
 
             $insert_arr = array();
             foreach ($keys as $key) {
@@ -68,6 +68,7 @@ ini_set('display_errors', 'on');
                     $insertId = $insertStatement->execute(false);
                     $result["success"] = true;
                     $result["message"] = $insertId;
+                    $result["workshop"] = true;
 
                 } catch (Exception $e) {
                     $result["success"] = false;

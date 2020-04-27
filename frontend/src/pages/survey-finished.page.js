@@ -9,8 +9,12 @@ import {
 function SurveyFinishedPage(props) {
 
     const SubmitForm = () => {
-        Submit().then(() => {
-            props.history.push('/after-submit')
+        Submit().then((data) => {
+            if (data.workshop === true) {
+                props.history.push('/workshop-info')
+            } else {
+                props.history.push('/after-submit')
+            }
         }).catch((error) => {
             alert(error);
         })
