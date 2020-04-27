@@ -21,7 +21,7 @@ function SurveyFinishedPage(props) {
                     props.history.push('/after-submit')
                 }
             }).catch((error) => {
-                alert(error);
+                alert(error.message);
             })
         } else {
             alert("Du hast bereits an der Umfrage teilgenommen! Vielen Dank!")
