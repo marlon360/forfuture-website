@@ -8,6 +8,9 @@
     RewriteEngine On
     RewriteBase /
 
+	RewriteCond     %{SERVER_PORT} ^80$
+	RewriteRule     ^(.*)$ https://%{SERVER_NAME}%{REQUEST_URI} [L,R]
+
     RewriteCond %{REQUEST_METHOD} POST
     RewriteRule ^/?api/$ /backend/api/ [R=307,L]
     RewriteRule ^/?api/(.*)$ /backend/api/$1 [R=307,L]
