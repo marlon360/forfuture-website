@@ -7,7 +7,7 @@ function Survey11bPage() {
 
     const items = ["Es mich interessieren würde.", "Es bequemer wäre.", "Es günstiger wäre.", "Es mehr Leute machen würden.", "Die Politik es vorschreibt."]
 
-    const [value, setValue] = useLocalStorage("nosustainabilitmotivation");
+    const [value, setValue] = useLocalStorage("nosustainabilitymotivation");
 
     const onChange = (evt) => {
         setValue(evt.item)
