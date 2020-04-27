@@ -1,3 +1,9 @@
+<Files ~ "^.*\.([Ee][Nn][Vv])">
+    order allow,deny
+    deny from all
+    satisfy all
+</Files>
+
 <IfModule mod_rewrite.c>
     RewriteEngine On
     RewriteBase /
