@@ -1,4 +1,12 @@
 <?php
+
+error_reporting(E_ALL);
+ini_set('display_errors', 'on');
+
+    use PHPMailer\PHPMailer\PHPMailer;
+    use PHPMailer\PHPMailer\SMTP;
+    use PHPMailer\PHPMailer\Exception as MailException;
+
     require_once '../../vendor/autoload.php';
 
     header("Content-Type: application/json; charset=UTF-8");
@@ -23,7 +31,7 @@
         $result["success"] = true;
         $result["signups"] = $data;
 
-        echo json_encode($result);
+        echo json_encode($result, JSON_UNESCAPED_UNICODE);
 
     }
 
@@ -57,7 +65,43 @@
                     $insertId = $insertStatement->execute(false);
                     $result["success"] = true;
                     $result["message"] = $insertId;
-                } catch (Exception $e) {
+
+                    // send mail
+
+                    $mail = new PHPMailer(true);
+
+                    //Server settings
+                    $mail->CharSet = PHPMailer::CHARSET_UTF8;
+                    $mail->SetLanguage('de');
+                    $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      // Enable verbose debug output
+                    $mail->isSMTP();                                            // Send using SMTP
+                    $mail->Host       = getenv('MAIL_HOST');                    // Set the SMTP server to send through
+                    $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
+                    $mail->Username   = getenv('MAIL_USER');                     // SMTP username
+                    $mail->Password   = getenv('MAIL_PWD');                               // SMTP password
+                    $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;         // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
+                    $mail->Port       = getenv('MAIL_PORT');                                  // TCP port to connect to, use 465 for `PHPMailer::ENCRYPTION_SMTPS` above
+                
+                    //Recipients
+                    $mail->setFrom(getenv('MAIL_ADDRESS'), 'ForFuture Info');
+                    $mail->addAddress(getenv('MAIL_ADDRESS'), 'ForFuture Info');     // Add a recipient
+                        
+                    // Content
+                    $mail->isHTML(true); // Set email format to HTML
+                    $mail->Subject = 'Neue Workshop Anmeldung ('. html_entity_decode($post_data->firstname).' '.html_entity_decode($post_data->lastname).')';
+
+                    $mail_content =  'Vorname: '.html_entity_decode($post_data->firstname).'<br/>';
+                    $mail_content .= 'Nachname: '.html_entity_decode($post_data->lastname).'<br/>';
+                    $mail_content .= 'Alter: '.html_entity_decode($post_data->age).'<br/>';
+                    $mail_content .= 'Nachricht: '.html_entity_decode($post_data->message).'<br/>';
+                    $mail_content .= 'E-Mail: '.html_entity_decode($post_data->email).'<br/>';
+                    $mail->Body = $mail_content;
+
+                    $mail->send();
+
+                } catch (MailException $e) {
+                    $result["debug"] = "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+                }catch (Exception $e) {
                     $result["success"] = false;
                     $result["message"] = "Du hast dich bereits angemeldet.";
                     $result["debug"] = $e->getMessage();
