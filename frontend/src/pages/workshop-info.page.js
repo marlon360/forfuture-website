@@ -6,13 +6,47 @@ import Arrow from '../icons/arrow.svg';
 import HAW from '../images/haw.svg';
 import Profile from '../images/profile.png';
 import SelectorComponent from '../components/selector.component';
+import { SignupService } from '../services/signup.service';
 
 function WorkshopInfoPage() {
 
- const [checked, setChecked] = useLocalStorage("policy",false);
+ const [firstname, setFirstname] = useState();
+ const onChangeFirstname = (evt) => {    
+    setFirstname(evt.target.value);
+ }
+ 
+ const [lastname, setLastname] = useState();
+ const onChangeLastname = (evt) => {    
+    setLastname(evt.target.value);
+ }
+ 
+ const items = ["16", "17", "18", "19"];
+ const [age, setAge] = useState();
+ const onChangeAge = (evt) => {    
+    setAge(evt.item);
+ }
 
- const onChange = (evt) => {    
-    setChecked(evt.target.checked);
+ const [email, setEmail] = useState();
+ const onChangeEmail = (evt) => {    
+    setEmail(evt.target.value);
+ }
+
+ const [message, setMessage] = useState();
+ const onChangeMessage = (evt) => {    
+    setMessage(evt.target.value);
+ }
+
+ const SignupClicked = () => {
+
+    const data = {
+        firstname, lastname, email, age, message
+    }
+    SignupService.Signup(data).then((data) => {
+        alert("Deine Anmeldung wurde erfolgreich abgeschickt. Du erhälst in Kürze Rückmeldung von uns!");
+    }).catch((error) => {
+        alert("Fehler: " + error.message);
+    })
+
  }
 
   return (
@@ -90,15 +124,15 @@ function WorkshopInfoPage() {
 
                     <h3>Anmelden</h3>
                     <p>Du möchtest bei dem Projekt dabei sein? Dann trag dich gern ein!</p>
-                    <input type="text" placeholder="Vorname"></input>
-                    <input type="text" placeholder="Nachname"></input>
-                    <input type="email" placeholder="E-Mail Adresse"></input>
+                    <input type="text" value={firstname} onChange={onChangeFirstname} placeholder="Vorname"></input>
+                    <input type="text" value={lastname} onChange={onChangeLastname} placeholder="Nachname"></input>
+                    <input type="email" value={email} onChange={onChangeEmail} placeholder="E-Mail Adresse"></input>
                     <div className="age-select">
                         <span>Alter:</span>
-                        <SelectorComponent items={["16", "17", "18", "19"]}></SelectorComponent>
+                        <SelectorComponent value={items.indexOf(age)} onChange={onChangeAge} items={items}></SelectorComponent>
                     </div>
-                    <textarea placeholder="Nachricht (max 100 Zeichen)" rows="4"></textarea>
-                    <button style={{marginTop: "1.4em"}}>Anmeldung abschicken</button>
+                    <textarea value={message} onChange={onChangeMessage} placeholder="Nachricht (max 100 Zeichen)" rows="4"></textarea>
+                    <button onClick={SignupClicked} style={{marginTop: "1.4em"}}>Anmeldung abschicken</button>
                     <p>Bis spätestens 4.5.2020 bekommst du Bescheid, ob du bei dem Projekt dabei bist. Ich freu mich auf dich!</p>
 
                     <h3>du bist jünger als 18?</h3>
