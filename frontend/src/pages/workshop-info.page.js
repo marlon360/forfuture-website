@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { Link } from "react-router-dom";
 import { SlideLeft, SlideOverFromBottom } from '../transitions/transitions';
 import { useLocalStorage } from '../utils/localStorage';
@@ -7,8 +7,20 @@ import HAW from '../images/haw.svg';
 import Profile from '../images/profile.png';
 import SelectorComponent from '../components/selector.component';
 import { SignupService } from '../services/signup.service';
+import { useSpring } from 'react-spring';
 
 function WorkshopInfoPage() {
+
+    const scrollDestinationRef = useRef();
+
+  const [y, setY] = useSpring(() => ({
+    reset: true,
+    y: 0,
+    onFrame: props => {
+        document.querySelector(".page").scroll(0, props.y);
+    },
+    config: { duration: 500 }
+  }));
 
  const [firstname, setFirstname] = useState();
  const onChangeFirstname = (evt) => {    
@@ -62,13 +74,15 @@ function WorkshopInfoPage() {
                     <p>
                     Vielleicht hast Lust bei meinem Projekt mit zu machen und das Morgen zu gestalten. Es geht hier nicht nur um deine Zukunft, sondern darum, mehr Menschen dazu zu animieren, zum Beispiel Plastik-freier, ökologischer, bewusster in ihrem Leben für Natur und Verbrauch zu werden.
                     </p>
-                    <div className="arrow-wrapper">
+                    <div style={{cursor: "pointer"}} onClick={() => { 
+                        setY({ y: scrollDestinationRef.current.getBoundingClientRect().top, from: { y: document.querySelector(".page").scrollTop }, });
+                        }}  className="bounce arrow-wrapper">
                         <img style={{margin: "auto", display: "block"}} className="arrow" src={Arrow}/>
                     </div>
                 </div>
             </div>
         </div>
-        <div id="workshop-info" className="landing2">
+        <div id="workshop-info" ref={scrollDestinationRef} className="landing2">
             <div className="landing2-content">
                 <div>
                     <h2>»_for future« sind strategische Workshops zum experimentieren, lernen & begreifen, wie wir schon heute unsere Zukunft schützten können!</h2>
