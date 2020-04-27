@@ -7,7 +7,7 @@ function Survey06Page() {
 
     const items = ["Sehr wahrscheinlich", "Schon", "Naja", "Eher nicht", "Gar nicht"]
 
-    const [value, setValue] = useLocalStorage("change");
+    const [value, setValue] = useLocalStorage("changefuture");
 
     const onChange = (evt) => {
         setValue(evt.item)
