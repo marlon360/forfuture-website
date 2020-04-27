@@ -492,3 +492,7 @@ span.output {
       width: initial;
       margin: initial;
   }
+
+  .hidden {
+      display: none;
+  }

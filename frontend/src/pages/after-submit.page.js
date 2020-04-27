@@ -6,6 +6,36 @@ import Arrow from '../icons/arrow.svg';
 
 function AfterSubmitPage() {
 
+    const copyToClipboard = () => {
+        const el = document.createElement('textarea');
+        el.value = "https://forfuture.studio";
+        document.body.appendChild(el);
+        el.select();
+        document.execCommand('copy');
+        document.body.removeChild(el);
+    };
+
+    const shareAvailable = () => {
+        if (navigator.share) {
+            return true;
+        }
+        return false;
+    }
+
+    const share = () => {
+        if (navigator.share) {
+            navigator.share({
+              title: 'Forfuture Umfrage',
+              url: 'https://forfuture.studio/'
+            }).then(() => {
+              console.log('Thanks for sharing!');
+            })
+            .catch(console.error);
+          } else {
+            // fallback
+          }
+    }
+
   return (
     <div>
         <div className="landing2">
@@ -21,6 +51,8 @@ function AfterSubmitPage() {
                     <p>
                     Grüße,<br/>
                     Katrin Schulz
+                    <button onClick={copyToClipboard}>Link kopieren</button>
+                    <button className={shareAvailable() ? '': 'hidden'} onClick={share}>Link teilen</button>
                     </p>
                 </div>
             </div>
