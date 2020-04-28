@@ -22,7 +22,7 @@ function SurveyFrame({number, question, children, prevPath, nextPath, nextPathIn
                         transition: SlideRight
                     }
                 }}>
-                    <img className="left-arrow" src={Arrow} />
+                    <img alt="left arrow" className="left-arrow" src={Arrow} />
                 </Link>
                 <Link className={`backward ${nextPathInactive ? "inactive" : ""}`} to={nextPathInactive ? {} : {
                     pathname: nextPath,
@@ -30,7 +30,7 @@ function SurveyFrame({number, question, children, prevPath, nextPath, nextPathIn
                         transition: SlideLeft
                     }
                 }}>
-                    <img className="right-arrow" src={Arrow} />
+                    <img alt="right arrow" className="right-arrow" src={Arrow} />
                 </Link>
             </div>
         </div>

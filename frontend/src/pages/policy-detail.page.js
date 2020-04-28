@@ -27,7 +27,7 @@ function PolicyDetailPage() {
                             transition: SlideRight
                         }
                     }}>
-                        <img className="left-arrow" src={Arrow} />
+                        <img alt="left arrow" className="left-arrow" src={Arrow} />
                     </Link>
                     <p>
                     <span className="underline">Datenschutz:</span><br/>

@@ -28,7 +28,7 @@ function LandingPage() {
             <div style={{cursor: "pointer"}} onClick={() => { 
           setY({ y: scrollDestinationRef.current.getBoundingClientRect().bottom, from: { y: document.querySelector(".page").scrollTop }, });
         }} className="bounce arrow-wrapper">
-                <img className="arrow" src={ArrowWhite}/>
+                <img alt="arrow" className="arrow" src={ArrowWhite}/>
             </div>
         </div>
         <div ref={scrollDestinationRef} className="landing2">

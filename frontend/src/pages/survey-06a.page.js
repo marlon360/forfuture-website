@@ -10,7 +10,7 @@ function Survey06aPage() {
 
     return (
         <SurveyFrame number={header} question="" prevPath="/06" nextPath="/07">
-            <img className="gif" src={Dog}/>
+            <img alt="funny dog" className="gif" src={Dog}/>
         </SurveyFrame>
     );
 }

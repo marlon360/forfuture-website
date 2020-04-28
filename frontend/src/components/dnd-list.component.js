@@ -31,7 +31,7 @@ const initial = (items) => {
             {...provided.draggableProps}
             {...provided.dragHandleProps}
           >
-            <img src={DragHandle}/>
+            <img alt="drag handle" src={DragHandle}/>
             {item.content}
           </div>
         )}

@@ -77,7 +77,7 @@ function WorkshopInfoPage() {
                     <div style={{cursor: "pointer"}} onClick={() => { 
                         setY({ y: scrollDestinationRef.current.getBoundingClientRect().top, from: { y: document.querySelector(".page").scrollTop }, });
                         }}  className="bounce arrow-wrapper">
-                        <img style={{margin: "auto", display: "block"}} className="arrow" src={Arrow}/>
+                        <img alt="down arrow" style={{margin: "auto", display: "block"}} className="arrow" src={Arrow}/>
                     </div>
                 </div>
             </div>
@@ -89,7 +89,7 @@ function WorkshopInfoPage() {
 
                     <h3>Über mich</h3>
                     <p>Ich bin Katrin Schulz, Designstudentin im 9ten Semester an der HAW Hamburg (Hochschule für Angewandte Wissenschaften), 24 Jahre alt und liebe Sport, Musik, Kochen und vor allem Essen. Ich gehe gerne Raus und mache mir viele Gedanken, wie die Welt wohl so in 20, 30 Jahren aussehen wird…</p>
-                    <img src={Profile}/>
+                    <img alt="profile picture" src={Profile}/>
 
                     <h3>Das Projekt</h3>
                     <p>
@@ -169,7 +169,7 @@ function WorkshopInfoPage() {
                         }
                     }}>Impressum</Link>
 
-                    <img src={HAW} />
+                    <img alt="HAW Hamburg Logo" src={HAW} />
 
                     <p>
                         Eine Bachelorarbeit der Hochschule für Angewandte Wissenschaften Hamburg, Hendrike Schmietendorf, Hendrike.Schmietendorf@haw-hamburg.de

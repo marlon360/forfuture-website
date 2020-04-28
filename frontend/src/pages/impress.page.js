@@ -28,7 +28,7 @@ function ImpressPage() {
                             transition: SlideRight
                         }
                     }}>
-                        <img className="left-arrow" src={Arrow} />
+                        <img alt="left arrow" className="left-arrow" src={Arrow} />
                     </Link>
                     <p>
                     <span className="underline">Impressum:</span><br/>
@@ -42,7 +42,7 @@ function ImpressPage() {
                     Webkalender & -Meldungen
                     Email: Hendrike.Schmietendorf@haw-hamburg.de
                     </p>
-                    <img className="center" src={HAW} />
+                    <img alt="HAW Hamburg Logo" className="center" src={HAW} />
                     <p>
                     Inhaberin dieser Seite ist<br/>
                     Katrin Schulz<br/>
