@@ -72,7 +72,7 @@ function WorkshopInfoPage() {
                 </div>
                 <div style={{"text-align": "left", "max-width": "100%"}} className="bottom">
                     <p>
-                    Vielleicht hast Lust bei meinem Projekt mit zu machen und das Morgen zu gestalten. Es geht hier nicht nur um deine Zukunft, sondern darum, mehr Menschen dazu zu animieren, zum Beispiel Plastik-freier, ökologischer, bewusster in ihrem Leben für Natur und Verbrauch zu werden.
+                    Vielleicht hast du Lust bei <span className="underline">meinem Projekt mitzumachen</span> und das Morgen zu gestalten. Vielleicht schaffen wir es, Nachhatligkeit leichter in unseren Alltag zu integrieren und darüber hinaus <span className="underline">mehr Menschen</span> dazu zu animieren, ökologischer und bewusster in ihrem Leben für Natur und Verbrauch zu werden. 
                     </p>
                     <div style={{cursor: "pointer"}} onClick={() => { 
                         setY({ y: scrollDestinationRef.current.getBoundingClientRect().top, from: { y: document.querySelector(".page").scrollTop }, });

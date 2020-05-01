@@ -23,7 +23,7 @@ function Survey10Page() {
     }
 
     return (
-        <SurveyFrame number="10/12" question="ACHTEST DU BEWUSST IN DEINEM ALLTAG DARAUF NACHHALTIG (UMWELTFREUNDLICH) ZU SEIN?" prevPath="/09" nextPath={getNextPath()} nextPathInactive={items.indexOf(value) < 0}>
+        <SurveyFrame number="10/12" question="ACHTEST DU IN DEINEM ALLTAG DARAUF NACHHALTIG ZU SEIN?" prevPath="/09" nextPath={getNextPath()} nextPathInactive={items.indexOf(value) < 0}>
             <SelectorComponent value={items.indexOf(value)} onChange={onChange} items={items}></SelectorComponent>
         </SurveyFrame>
     );

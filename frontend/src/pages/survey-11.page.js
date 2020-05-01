@@ -12,7 +12,7 @@ function Survey11Page() {
     }
 
     return (
-        <SurveyFrame number="11/12" question={<>Was tust du <span className="underline">genau</span>, um nachhaltig zu sein?</>} prevPath="/10" nextPath="/12">
+        <SurveyFrame number="11/12" question={<>Was tust du <span className="underline">genau</span>, um nachhaltig zu handeln?</>} prevPath="/10" nextPath="/12">
             <p>
                 Ich mache…<br/>
                 Ich engagiere mich für…<br/>

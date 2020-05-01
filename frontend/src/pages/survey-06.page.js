@@ -14,7 +14,7 @@ function Survey06Page() {
     }
 
     return (
-        <SurveyFrame number="06/12" question="GLAUBST DU, DASS DU IN DEINER AKTUELLEN (NICHT CORONA-ZEIT) POSITION, ETWAS FÜR UNSERE ZUKUNFT VERÄNDERN KANNST?" prevPath="/05" nextPath="/06a" nextPathInactive={items.indexOf(value) < 0}>
+        <SurveyFrame number="06/12" question="GLAUBST DU, DASS DU IN DEINER AKTUELLEN POSITION (NICHT WÄHREND CORONA), ETWAS FÜR UNSERE ZUKUNFT VERÄNDERN KANNST?" prevPath="/05" nextPath="/06a" nextPathInactive={items.indexOf(value) < 0}>
             <SelectorComponent size="full" value={items.indexOf(value)} onChange={onChange} items={items}></SelectorComponent>
         </SurveyFrame>
     );

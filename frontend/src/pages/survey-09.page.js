@@ -16,7 +16,7 @@ function Survey09Page() {
         <SurveyFrame number="09/12" question="Für wie Nachhaltig schätzt du dich ein?" prevPath="/08" nextPath="/10">
             <p>
             1 = Absolut gar nicht.<br/>
-            5 = 100%! Tue alles, was machbar ist. Ich verzichte sogar auf’s Flugzeug fliegen, um in den Urlaub zu kommen.
+            5 = 100%! Tue alles, was machbar ist. Ich verzichte sogar auf’s Fliegen, um in den Urlaub zu kommen.
             </p>
             <SliderComponent min={1} max={5} value={sustainabilityScale} onChange={onChange} title="Nachhaltigkeit"></SliderComponent>
         </SurveyFrame>

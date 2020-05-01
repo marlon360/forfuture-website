@@ -5,7 +5,7 @@ import { useLocalStorage } from '../utils/localStorage';
 
 function Survey07Page() {
 
-    const items = ["Extrem bedrohlich", "Real und kritisch", "Real", "Da, aber übertrieben dargestellt", "Welcher Klimawandel?"]
+    const items = ["sehr real und extrem bedrohlich", "sehr real und bedrohlich", "schon real, aber wenig bedrohlich", "real, aber überbewertet", "Welcher Klimawandel?"]
 
     const [value, setValue] = useLocalStorage("climatechange");
 
