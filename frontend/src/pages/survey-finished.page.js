@@ -16,7 +16,7 @@ function SurveyFinishedPage(props) {
             Submit().then((data) => {
                 setSubmitted(true);
                 if (data.workshop === true) {
-                    props.history.push('/workshop-info')
+                    props.history.push('/after-submit-workshop')
                 } else {
                     props.history.push('/after-submit')
                 }
