@@ -112,7 +112,7 @@ function WorkshopInfo({backLink}) {
                         <span>Alter:</span>
                         <SelectorComponent value={items.indexOf(age)} onChange={onChangeAge} items={items}></SelectorComponent>
                     </div>
-                    <textarea value={message} onChange={onChangeMessage} placeholder="Nachricht (max 100 Zeichen)" rows="4"></textarea>
+                    <textarea value={message} onChange={onChangeMessage} placeholder="Nachricht (max 100 Zeichen)" maxLength="100" rows="4"></textarea>
                     <button onClick={SignupClicked} style={{marginTop: "1.4em"}}>Anmeldung abschicken</button>
                     <p>Bis spätestens 4.5.2020 bekommst du Bescheid, ob du bei dem Projekt dabei bist. Ich freu mich auf dich!</p>
 

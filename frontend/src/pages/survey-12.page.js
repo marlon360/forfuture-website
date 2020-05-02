@@ -24,7 +24,7 @@ function Survey11Page() {
     return (
         <SurveyFrame number="12/12" question={<>Was könnte dich <span class="underline">motivieren</span>, (noch) nachhaltiger zu leben?</>} prevPath={getPrevPath()} nextPath="/source">
             <p>Schreibe 1-3 kurze Ideen auf.</p>
-            <textarea value={value} onChange={onChange}></textarea>
+            <textarea maxLength="400" value={value} onChange={onChange}></textarea>
         </SurveyFrame>
     );
 }

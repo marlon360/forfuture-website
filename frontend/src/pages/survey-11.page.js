@@ -19,7 +19,7 @@ function Survey11Page() {
                 Ich verzichte auf…<br/>
                 Sonstiges…
             </p>
-            <textarea value={value} onChange={onChange}></textarea>
+            <textarea maxLength="400" value={value} onChange={onChange}></textarea>
         </SurveyFrame>
     );
 }
