@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { Link } from "react-router-dom";
 
 import HAW from '../images/haw.svg';
@@ -6,6 +6,8 @@ import Profile from '../images/profile.png';
 import { SlideLeft } from '../transitions/transitions';
 import { SignupService } from '../services/signup.service';
 import SelectorComponent from './selector.component';
+import TypeAnimationComponent from './type-animation.component';
+import { useSpring } from 'react-spring';
 
 function WorkshopInfo({backLink}) {
 
@@ -34,6 +36,16 @@ function WorkshopInfo({backLink}) {
     const onChangeMessage = (evt) => {    
        setMessage(evt.target.value);
     }
+
+    const [y, setY] = useSpring(() => ({
+        reset: true,
+        y: 0,
+        onFrame: props => {
+            document.querySelector(".page").scroll(0, props.y);
+        },
+        config: { duration: 500 }
+      }));
+      const scrollDestinationRef = useRef();
    
     const SignupClicked = () => {
    
@@ -52,6 +64,12 @@ function WorkshopInfo({backLink}) {
         <div id="workshop-info" className="landing2">
             <div className="landing2-content">
                 <div>
+                    <TypeAnimationComponent />
+
+                    <a onClick={() => { 
+                        setY({ y: scrollDestinationRef.current.getBoundingClientRect().top - 20, from: { y: document.querySelector(".page").scrollTop }, });
+                        }} className="button signup-button">Anmelden</a>
+
                     <h2>»_forfuture« sind strategische <span className="underline">Workshops</span> zum experimentieren, lernen & begreifen, wie wir schon heute <span className="underline">unsere Zukunft gestalten</span> können!</h2>
 
                     <h3>Über mich</h3>
@@ -104,7 +122,7 @@ function WorkshopInfo({backLink}) {
                         *alle Termine sind flexibel, so dass wir sicher einen Kompromiss finden können, falls du jetzt schon weißt, dass du mal nicht kannst.
                     </p>
 
-                    <h3>Anmelden</h3>
+                    <h3 ref={scrollDestinationRef}>Anmelden</h3>
                     <p>
                         Du möchtest bei dem Projekt dabei sein? Dann trag dich gern ein!
                         Bei fragen, schreib mir einfach ne Mail an: info@forfuture.studio
