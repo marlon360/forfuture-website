@@ -52,59 +52,63 @@ function WorkshopInfo({backLink}) {
         <div id="workshop-info" className="landing2">
             <div className="landing2-content">
                 <div>
-                    <h2>»_for future« sind strategische Workshops zum experimentieren, lernen & begreifen, wie wir schon heute unsere Zukunft schützten können!</h2>
+                    <h2>»_forfuture« sind strategische <span className="underline">Workshops</span> zum experimentieren, lernen & begreifen, wie wir schon heute <span className="underline">unsere Zukunft gestalten</span> können!</h2>
 
                     <h3>Über mich</h3>
-                    <p>Ich bin Katrin Schulz, Designstudentin im 9ten Semester an der HAW Hamburg (Hochschule für Angewandte Wissenschaften), 24 Jahre alt und liebe Sport, Musik, Kochen und vor allem Essen. Ich gehe gerne Raus und mache mir viele Gedanken, wie die Welt wohl so in 20, 30 Jahren aussehen wird…</p>
+                    <p>Ich bin Katrin Schulz, Designstudentin im neunten Semester an der HAW Hamburg (Hochschule für Angewandte Wissenschaften), 24 Jahre alt und liebe Sport, Musik, Kochen und vor allem Essen. Ich gehe gerne raus und mache mir viele Gedanken, wie die Welt wohl so in 20, 30 Jahren aussehen wird…</p>
                     <img alt="profile picture" src={Profile}/>
 
                     <h3>Das Projekt</h3>
                     <p>
-                        Das Projekt »_forfuture» ist meine Bachelorarbeit. Ich studiere, wie gesagt, Design und plane als Abschluss-Projekt mich ein wenig um meine Zukunft zu kümmern.<br/>
-                        Das heißt, ich beschäftigt mich mit Umwelt und Nachhaltigkeit und speziell mit der Frage wo wir ansetzten können, um nachhaltiger in unserem Alltag zu sein.<br/>
-                        <br/>
-                        Vielleicht hast du ja das gleiche Problem wie ich und es fällt dir gar nicht so leicht 100% umweltfreundlich zu leben, obwohl es eigentlich so wichtig wäre. Oder vielleicht bist du auch Pionier*in auf dem Gebiet und kannst mir ein paar Tipps geben. <br/>
-                        Jedenfalls denke ich, dass viele Menschen nicht wissen, wie sie eine umweltfreundliche Routine in ihren Alltag einbauen. Deswegen habe ich schließlich entschieden – unserer Zukunft zuliebe – mich damit zu beschäftigen. Ob am Ende eine Werbe-Kampagne oder einer App oder ähnliches entsteht, ist noch nicht klar. Das wird sich in unserer Zusammenarbeit herausstellen. Ich kann’s kaum erwarten!
+                    Das Projekt »_forfuture» ist meine Bachelorarbeit, in der ich mich mit Social Design beschäftige. <br />
+                    <br />
+                    Social Design klingt erstmal hochgestochen, ist im Grunde aber “Designen <span className="underline">mit</span> und <span className="underline">für</span> Gesellschaft”. <br />
+                    In vielen Social Design Projekten geht es darum, nicht unbedingt kommerziell zu sein (also etwas verkaufen zu wollen), sondern <span className="underline">kreative Lösungen</span> für <span className="underline">verzwickte Probleme</span> zu finden. <br />
+                    <br />
+                    Der <span className="underline">Prozess</span> ist das, worum es geht, und somit der Schwerpunkt unserer Arbeit. Aber natürlich soll das Produkt am Ende nicht zu kurz kommen. Deswegen gibt es gewisse Methoden und kreative Aufgaben, um hinterher mindestens einen Prototyp in der Hand zu halten. Dieser kann dann für zukünftige Workshops, mit der gleichen oder ähnlichen Frage, als Grundlage dienen.<br />
+                    <br />
+                    Wie dieser <span className="underline">Prototyp</span> am Ende aussieht – ob es eine Werbe-Kampagne oder eine App oder etwas komplett anderes wird – ist zu diesem Zeitpunkt noch unklar, weil wir noch nicht wissen, wo genau unser Problem steckt. Aufregend, oder? :)<br />
+                    <br />
+                    Die Frage, meiner »_forfuture» Workshop-Reihe lautet: <span className="underline">»Wie kann ich Nachhaltigkeit intensiver in meinen Alltag einbauen?»</span> Am besten mit so wenig Aufwand wie möglich, denn – seien wir ehrlich – es gibt auch noch andere Dinge, die ebenfalls Zeit und Energie kosten. <br />
+                    <br />
+                    Vielleicht geht es dir ja ähnlich und es fällt dir gar nicht so leicht 100% umweltfreundlich zu leben, obwohl es eigentlich so wichtig wäre. <br />
+                    <span className="underline">Wie können wir da besser werden und vielleicht eine Antwort finden?</span> Und möglicherweise hilft unsere Arbeit am Ende nicht nur uns, sondern mehr Menschen, denen es ähnlich geht. <br />    
                     </p>
 
                     <h3>Unsere Zusammenarbeit</h3>
                     <p>
-                        Klar, ich könnte das »_forfuture» Projekt völlig allein machen! Seit ich mit meiner Recherche begonnen habe, stelle ich immer wieder fest, dass ich Unterstützung brauche. Das Team zu einer Zukunfts-Verändernden Frage wie dieser, muss agil sein, unkonventionell (also “anders”-denkend), engagiert und nicht Erwachsen! 
-                        <br/><br/>
-                        Unsere Gruppe wird nicht größer sein, als 8 Leute (mich eingeschlossen). Umweltspezialisten sowie Öko-Anfänger sind herzlich willkommen! Denn hinterher macht ein solches Projekt die vielseitigen Blicke auf das Thema stark. 
-                        <br/><br/>
-                        In unserer Zusammenarbeit wird es viel um kreative Methoden gehen, die ich aus dem Designbereich kenne, unteranderem dem Design-Thinking Porzess. Es geht’s schließlich darum unsere Zukunft zu “gestalten”. Am Endprodukt hast du genauso Mitspracherecht wie ich. Es ist unser gemeinsames Projekt! Das ist wichtig, denn das hier ist kein Schulunterricht, sondern eher eine Kooperation.
-                        <br/><br/>
-                        Wie gesagt: Die Workshop-Reihe ist Teil meiner Bachelorarbeit. Ich habe also Grund genug seriös mit Dir und dem hier geschriebenen Inhalt umzugehen. Ich nehm’ meine Sache ernst und würde mich riesig freuen, wenn du Lust darauf hast, dabei zu sein!
+                        Das Team zu einer Zukunfts-Verändernden Frage wie dieser (siehe Oben), muss agil sein, unkonventionell (also “anders denkend“), engagiert und nicht erwachsen! Unsere Gruppe wird nicht größer sein, als <span className="underline">acht Leute</span> (mich eingeschlossen). Hinterher macht die vielseitigen Blickewinkel ein solches Projekt stark. Das heißt Nachhaltigkeits-Profis sowie “Just-Starter” sind herzlich willkommen! <br />
+                        <br />
+                        In unserer Zusammenarbeit wird es viel um kreative Methoden gehen, die ich aus dem Designbereich kenne, unter anderem dem Design-Thinking Prozess. Es geht schließlich darum unsere Zukunft zu “gestalten”. Und, es ist kein Schulunterricht, wir bestimmen gemeinsam in der Gruppe, wohin sich unser Prozess entwickelt. Das heißt, auch am Endprodukt bist du natürlich beteiligt!<br />
+                        <br />
+                        Wie gesagt: Die Workshop-Reihe ist Teil meiner Bachelorarbeit. Ich habe also Grund genug seriös mit dir und dem hier geschriebenen Inhalt umzugehen. Ich nehme meine Sache ernst und würde mich riesig freuen, wenn du Lust darauf hast, dabei zu sein!<br />
+                        <br />
                     </p>
 
                     <h3>Durchführung während Corona</h3>
                     <p>
-                        Das ideale Umfeld solcher Art Workshop ist normalerweise ein großer Tisch und viel Materialen, wie Zettel, Stift, Klebe, vielleicht Holz, knete, etc. In Corona-Zeiten müssen wir ein wenig umdisponieren und werden uns größtenteils auf digitalem Wege treffen – über das Internet. Dafür ist es wichtig, dass du ein Computer/Laptop mit Internetzugang hast. Gut dazu wäre auch noch ein Mikro und eine Kamera gut, damit wir uns hören und sehen können. Zumindest Laptops haben Mikros und Kameras eingebaut. 
+                        Das ideale Umfeld solcher Art Workshop ist normalerweise ein großer Tisch und vielen Materialen, wie Zettel, Stift, Klebe, vielleicht Holz, knete, etc. In Corona-Zeiten müssen wir ein wenig umdisponieren und werden uns größtenteils auf digitalem Wege treffen – über das Internet. Dafür ist es wichtig, dass du einen Computer oder Laptop mit Internetzugang hast. Dazu wäre auch noch ein Mikro und eine Kamera gut, damit wir uns hören und sehen können. Zumindest Laptops haben Mikros und Kameras eingebaut. 
                     </p>
 
                     <h3>Workshop-Termine</h3>
                     <p>
-                        Di, 12.5. | ab 18 Uhr | 1-2h<br/>
-                        Kennlerntermin <br/>
-                        <br/>
-                        So, 17.5. | ab 11 Uhr | 6h<br/>
-                        Workshop “Verstehen und Beobachten” + “Standpunkt definieren” <br/>
-                        <br/>
-                        So, 24.5. | ab 11 Uhr | 4-6h<br/>
-                        Workshop “Ideen entwickeln”<br/>
-                        <br/>
-                        Sa+So, 6.+7.6. | ab 11	Uhr | 3h jeweils<br/>
-                        Workshop “Prototyp kreieren”<br/>
-                        <br/>
-                        Di, 16.6. | ab 18 Uhr | 1+2h<br/>
-                        Workshop “Feedback Prototype”<br/>
-                        <br/>
+                        Mo, 1.6. bis Fr, 5.6.2020 (inklusive)<br />
+                        immer 14 bis 18 Uhr <br />
+                        Workshops: <br />
+                        »Verstehen & Beobachten»<br />
+                        »Standpunkt finden» <br />
+                        »Ideen entwickeln»<br />
+                        »Prototyp kreieren»<br />
+                        »Testen» und »Feedback»<br />
+                        <br />
                         *alle Termine sind flexibel, so dass wir sicher einen Kompromiss finden können, falls du jetzt schon weißt, dass du mal nicht kannst.
                     </p>
 
                     <h3>Anmelden</h3>
-                    <p>Du möchtest bei dem Projekt dabei sein? Dann trag dich gern ein!</p>
+                    <p>
+                        Du möchtest bei dem Projekt dabei sein? Dann trag dich gern ein!
+                        Bei fragen, schreib mir einfach ne Mail an: info@forfuture.studio
+                    </p>
                     <input type="text" value={firstname} onChange={onChangeFirstname} placeholder="Vorname"></input>
                     <input type="text" value={lastname} onChange={onChangeLastname} placeholder="Nachname"></input>
                     <input type="email" value={email} onChange={onChangeEmail} placeholder="E-Mail Adresse"></input>
@@ -114,13 +118,13 @@ function WorkshopInfo({backLink}) {
                     </div>
                     <textarea value={message} onChange={onChangeMessage} placeholder="Nachricht (max 100 Zeichen)" maxLength="100" rows="4"></textarea>
                     <button onClick={SignupClicked} style={{marginTop: "1.4em"}}>Anmeldung abschicken</button>
-                    <p>Bis spätestens 4.5.2020 bekommst du Bescheid, ob du bei dem Projekt dabei bist. Ich freu mich auf dich!</p>
+                    <p>Bis spätestens <span className="underline">25.5.2020</span> bekommst du Bescheid, ob du bei dem Projekt dabei bist. Ich freu mich auf dich!</p>
 
                     <h3>du bist jünger als 18?</h3>
-                    <p>Sprich mit deinen Eltern! Zeig ihnen diese Seite und hole dir ihr “okay“, an diesem Projekt teilzunehmen. Nach der Anmeldung bekommst du in der Bestätigungsmail ein Einverständnis-Formular zu geschickt, dass deine Eltern ausfüllen und zurückschicken müssen. Andernfalls darf ich leider (rechtlich) nicht mit dir arbeiten und das wäre schade! </p>
+                    <p>Sprich mit deinen Eltern! Zeig ihnen diese Seite und hole dir ihr “okay“, an diesem Projekt teilzunehmen. Nach der Anmeldung bekommst du in der Bestätigungsmail ein Einverständnis-Formular zugeschickt, das deine Eltern ausfüllen und zurückschicken müssen. Andernfalls darf ich leider (rechtlich) nicht mit dir arbeiten und das wäre schade! </p>
                 
                     <h3 id="policy">Datenschutz</h3>
-                    <p>Mit deinen Daten soll gut umgegangen werden! Aus dem Grund sind auf dieser Seite keine Analyticks- oder Trackingfunktionen eingebaut und lediglich seriöse Drittanbieter eingebunden, die den Richtlinien der DSGVO folgen d.h. ihre Server in Deutschland haben, sodass keine Datenweitergabe statt findet! Möchtest du mehr erfahren? Dann lese in den Bestimmungen die Details nach:</p>
+                    <p>Mit deinen Daten soll gut umgegangen werden! Aus dem Grund sind auf dieser Seite keine Analyticks- oder Trackingfunktionen eingebaut und lediglich <span className="underline">seriöse</span> Drittanbieter eingebunden, die den <span className="underline">Richtlinien der DSGVO</span> folgen d.h. ihre Server in Deutschland haben, sodass keine Datenweitergabe statt findet! Möchtest du mehr erfahren? Dann lies in den Bestimmungen die Details nach:</p>
                     <Link className="button" to={{
                         pathname: "/policy-detail",
                         state: {
