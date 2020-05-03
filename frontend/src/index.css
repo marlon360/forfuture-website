@@ -77,11 +77,6 @@ body {
         background-size: cover;
     }
 }
-.finished {
-    background-image: linear-gradient(to top, #ff7f95 -14%, #ffce98 91%);
-    background-size: initial;
-    background-position: initial;
-}
 
 .finished a.button {
     background-color: #fff;
@@ -189,6 +184,7 @@ img.arrow {
 .finished a.button {
     border: solid 2px var(--light);
     color: var(--light);
+    max-width: 400px;
 }
 .finished a.button:hover {
     background-color: #FFFFFF;
@@ -308,13 +304,13 @@ h2 {
 
 .survey button.small {
     display: inline-block;
-    width: 3em;
+    width: 100%;
     padding-left: 0;
     padding-right: 0;
 }
 .survey button.medium {
     display: inline-block;
-    width: 60%;
+    width: 100%;
 }
 .survey button.large {
     display: inline-block;
