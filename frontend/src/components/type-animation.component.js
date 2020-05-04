@@ -17,7 +17,7 @@ function TypeAnimationComponent() {
             '^300Warte^500...^1200ist Trump noch Präsident?^600?^500?',
             'Ist das unsere Zukunft?',
             'wt^100fxyckjvfö^50dfgkah?',
-            'Was tust du ^500__forfuture?^3000'
+            'Was tust du ^500_forfuture?^3000'
         ],
         typeSpeed: 55,
         backSpeed: 25,
