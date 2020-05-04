@@ -8,22 +8,25 @@ function TypeAnimationComponent() {
     var options = {
         strings: [
             'Wie sieht die Welt aus?',
-            'In 20 oder 30 Jahren?',
-            'Mehr Plastik als Fische im Ozean?',
-            '4 Grad wärmer?',
-            'Alle Gletscher geschmolzen?',
-            'Meeresspiegel gestiegen?',
-            'Hamburg unter Wasser?',
-            'Warte^200...^1000ist Trump noch Präsident?^400?^400?',
+            '^500In 20 oder 30 Jahren?',
+            '^400Mehr Plastik als Fische im Ozean?',
+            '^400 4 Grad wärmer?',
+            '^300Alle Gletscher geschmolzen?',
+            '^300Meeresspiegel gestiegen?',
+            '^200Hamburg unter Wasser?',
+            '^300Warte^500...^1200ist Trump noch Präsident?^600?^500?',
             'Ist das unsere Zukunft?',
-            'wtfxyckjvfödfgkah?',
-            'Was tust du ^200__forfuture?^3000'
+            'wt^100fxyckjvfö^50dfgkah?',
+            'Was tust du ^500__forfuture?^3000'
         ],
         typeSpeed: 60,
         backSpeed: 50,
-        backDelay: 880,
+        backDelay: 1000,
         showCursor: false,
-        loop: true
+        loop: true,
+        onStop: (arrayPos, self) => {
+            console.log("stop")
+        }
     };
 
     useEffect(() => {
@@ -32,7 +35,7 @@ function TypeAnimationComponent() {
 
     return (
         <div className="animation-container">
-            <h2 className="animation-text" ref={typeEl}></h2>
+            <span className="animation-text" ref={typeEl}></span>
         </div>
     );
 }

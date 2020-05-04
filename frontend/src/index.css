@@ -501,7 +501,7 @@ span.output {
       background-color: black;
       height: 200px;
 
-      padding: 8pt;
+      padding: 12pt;
 
       display: flex;
       justify-content: center;
@@ -510,10 +510,12 @@ span.output {
       box-sizing: border-box;
   }
 
-  h2.animation-text {
-      text-transform: initial;
+  span.animation-text {
+      font-weight: bold;
+      font-size: 1.7em;
       color: white;
       text-align: center;
+      display: inline;
   }
 
   a.signup-button {
@@ -521,4 +523,16 @@ span.output {
       width: 130px;
       margin-top: 1em;
       margin-bottom: 3em;
+  }
+
+  span.animation-text:after {
+    visibility: visible;
+    content: '';
+    background-color: #ffffff;
+    display: inline-block;
+    position: relative;
+    width: 0.1em;
+    height: 1em;
+    top: 5px;
+    margin-left: 0.1em;
   }
