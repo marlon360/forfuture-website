@@ -108,16 +108,12 @@ function WorkshopInfo({backLink}) {
                         Das ideale Umfeld solcher Art Workshop ist normalerweise ein großer Tisch und vielen Materialen, wie Zettel, Stift, Klebe, vielleicht Holz, knete, etc. In Corona-Zeiten müssen wir ein wenig umdisponieren und werden uns größtenteils auf digitalem Wege treffen – über das Internet. Dafür ist es wichtig, dass du einen Computer oder Laptop mit Internetzugang hast. Dazu wäre auch noch ein Mikro und eine Kamera gut, damit wir uns hören und sehen können. Zumindest Laptops haben Mikros und Kameras eingebaut. 
                     </p>
 
-                    <h3>Workshop-Termine</h3>
+                    <h3>Workshop-Termine*</h3>
                     <p>
                         Mo, 1.6. bis Fr, 5.6.2020 (inklusive)<br />
                         immer 14 bis 18 Uhr <br />
                         Workshops: <br />
-                        »Verstehen & Beobachten»<br />
-                        »Standpunkt finden» <br />
-                        »Ideen entwickeln»<br />
-                        »Prototyp kreieren»<br />
-                        »Testen» und »Feedback»<br />
+                        »Verstehen & Beobachten», »Standpunkt finden», »Ideen entwickeln», »Prototyp kreieren», »Testen» und »Feedback»<br />
                         <br />
                         *alle Termine sind flexibel, so dass wir sicher einen Kompromiss finden können, falls du jetzt schon weißt, dass du mal nicht kannst.
                     </p>
