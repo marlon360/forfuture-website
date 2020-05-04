@@ -19,9 +19,10 @@ function TypeAnimationComponent() {
             'wt^100fxyckjvfö^50dfgkah?',
             'Was tust du ^500__forfuture?^3000'
         ],
-        typeSpeed: 60,
-        backSpeed: 50,
+        typeSpeed: 55,
+        backSpeed: 25,
         backDelay: 1000,
+        startDelay: 800,
         showCursor: false,
         loop: true,
         onStop: (arrayPos, self) => {
