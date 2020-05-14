@@ -16,7 +16,7 @@ function TypeAnimationComponent() {
             '^200Hamburg unter Wasser?',
             '^300Warte^500...^1200ist Trump noch Präsident?^600?^500?',
             'Ist das unsere Zukunft?',
-            'wt^100fxyckjvfö^50dfgkah?',
+            'wt^100fycfö^50dfgah?',
             'Was tust du ^500_forfuture?^3000'
         ],
         typeSpeed: 55,

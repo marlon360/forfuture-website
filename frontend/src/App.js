@@ -36,6 +36,7 @@ import SurveySorryPage from './pages/survey-sorry.page';
 import WorkshopInfoPage from './pages/workshop-info.page';
 import AfterSubmitPage from './pages/after-submit.page';
 import AfterSubmitWorkshopPage from './pages/after-submit-workshop.page';
+import AnimationPage from './pages/animation.page';
 
 function App() {
 
@@ -83,6 +84,7 @@ function App() {
               <Route path="/workshop-info" component={WorkshopInfoPage}/>
               <Route path="/after-submit-workshop" component={AfterSubmitWorkshopPage}/>
               <Route path="/after-submit" component={AfterSubmitPage}/>
+              <Route path="/animation" component={AnimationPage}/>
               <Route exact path="/">
                 <LandingPage/>
               </Route>

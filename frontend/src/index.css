@@ -496,10 +496,10 @@ span.output {
   }
 
   .animation-container {
-        width: calc(100% + 2.8em);
-        margin: -1.4em 0 0 -1.4em;
-      background-color: black;
-      height: 200px;
+        width: 460px;
+        margin: auto;
+      background-color: var(--dark);
+      height: 830px;
 
       padding: 12pt;
 
@@ -512,7 +512,7 @@ span.output {
 
   span.animation-text {
       font-weight: bold;
-      font-size: 1.7em;
+      font-size: 3.3em;
       color: white;
       text-align: center;
       display: inline;
