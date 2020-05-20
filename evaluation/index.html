@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ForFuture - Auswertung</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="content">
+        <h1>Forfuture - Auswertung</h1>
+        <div class="text">Teilnehmer: <span id="count"></span></div>
+        <div class="row">
+            <div class="chart-container">
+                <canvas id="age-chart"></canvas>
+            </div>
+            <div class="chart-container">
+                <canvas id="sex-chart"></canvas>
+            </div>
+            <div class="chart-container">
+                <canvas id="source-chart"></canvas>
+            </div>
+        </div>
+        <div class="row">
+            <div class="chart-container">
+                <canvas id="future-chart"></canvas>
+            </div>
+            <div class="chart-container">
+                <canvas id="importance-chart"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
