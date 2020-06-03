@@ -469,6 +469,84 @@ span.output {
       display: block;
   }
 
+  #workshop-info img.hero-image {
+    width: calc(100% + 2.8em);
+    margin: -1.4em 0 0 -1.4em;
+    max-width: none;
+    height: auto;
+  }
+
+  #workshop-info .signup-container {
+      background: white;
+      width: calc(100% + 2.8em);
+      padding: 0 1.4em;
+      margin: 0 -1.4em;
+      box-sizing: border-box;
+  }
+  #workshop-info ul {
+    list-style: none;
+  }
+  #workshop-info li {
+      font-size: 1.1em;
+      padding-bottom: 0.8em;
+  }
+  #workshop-info li img {
+    height: 20px;
+    width: 16px;
+    display: inline-block;
+    padding: 0;
+    padding-right: 10px;
+    margin: 0;
+    margin-left: -1.4em;
+    transform: translateY(3px);
+  }
+
+  #workshop-info .accordion h3 {
+      margin: 0;
+  }
+
+  #workshop-info .accordion .accordion__button {
+      margin: 0.4em 0;
+      padding: 1em 0;
+      padding-right: 0.8em;
+      border-bottom:  1px solid var(--dark);
+      cursor: pointer;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      outline: none;
+  }
+
+  #workshop-info .accordion .accordion__button img {
+      width: 20px;
+      height: auto;
+      margin: 0;
+      display: inline-block;
+      transform: rotate(0deg);
+      transition: transform 200ms;
+  }
+  #workshop-info .accordion .accordion__button[aria-expanded=true] img {
+    transform: rotate(-90deg);
+}
+
+  #workshop-info h2.workshop-headline {
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.25;
+    letter-spacing: 0.5px;
+    text-align: center;
+    text-transform: initial;
+    margin: 1.8em auto;
+    color: var(--dark);
+  }
+  .uppercase {
+      text-transform: uppercase !important;
+  }
+  #workshop-info h2 {
+      text-transform: initial;
+  }
+
   #workshop-info h3 {
       margin-top: 4em;
   } 
@@ -519,10 +597,10 @@ span.output {
   }
 
   a.signup-button {
-      font-size: 0.9em;
-      width: 130px;
+      font-size: 1.1em;
+      width: 290px;
+      max-width: 100%;
       margin-top: 1em;
-      margin-bottom: 3em;
   }
 
   span.animation-text:after {
