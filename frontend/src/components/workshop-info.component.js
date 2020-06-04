@@ -104,9 +104,9 @@ function WorkshopInfo({ backLink }) {
 
                     <div className="signup-container">
                         <h3 style={{ paddingTop: '1.3em' }} ref={scrollDestinationRef}>Anmelden</h3>
-                        <h2>Es sind nur <span className="underline">7 Plätze</span> verfügbar!</h2>
+                        <h2>Es sind insgesamt nur <span className="underline">7 Plätze</span> verfügbar!</h2>
                         <p>
-                            Du bist <b>zwischen 16 und 19 Jahre</b> alt? Melde dich bis zum <b>8.6.2020</b> an und bekommst <b>24h später Bescheid</b>, ob du beim Workshop dabei bist. <br />
+                            Du bist <b>zwischen 16 und 19 Jahre</b> alt? Melde dich bis zum <b>14.6.2020</b> an und bekommst <b>24h später Bescheid</b>, ob du beim Workshop dabei bist. <br />
                             <br />
                         Bei Fragen vorab, schreib uns einfach eine Mail an: <b>info@forfuture.studio</b> <br />
                         </p>
@@ -123,11 +123,13 @@ function WorkshopInfo({ backLink }) {
                     </div>
 
                     <h3>Workshop Termine</h3>
-                    <h2 style={{ marginBottom: '0' }}>13.06.2020 (Samstag) ab 10 Uhr - open end</h2>
+                    <h2 style={{ marginBottom: '0' }}>20.06.2020 (Samstag) <br />
+                    ab 10 Uhr - open end</h2>
                     <p style={{ marginTop: '0.3em' }}>
                         Kennenlernen, Problem besprechen, Recherchieren, Personas erstellen, Standpunkt definieren<br />
                     </p>
-                    <h2 style={{ marginBottom: '0' }}>14.06.2020 (Samstag) ab 10 - 18 Uhr</h2>
+                    <h2 style={{ marginBottom: '0' }}>21.06.2020 (Samstag) <br />
+                    ab 10 - 18 Uhr</h2>
                     <p style={{ marginTop: '0.3em' }}>
                         Ideen entwickeln, Prototypen bauen, Testen und Feedback einholen, Abschluss-Reflektion<br />
                     </p>
@@ -190,7 +192,7 @@ function WorkshopInfo({ backLink }) {
                                 </AccordionItemButton>
                             </AccordionItemHeading>
                             <AccordionItemPanel>
-                                <p>Wenn du noch <b>nicht 18 Jahre alt</b> bist musst du, spätestens nach der Anmeldung, deine Eltern eine <b>Einverständnis-Formular unterschreiben lassen</b>, dass du mit der Bestätigungsmail zugeschickt bekommst und das wieder zurückgeschickt werden muss. Andernfalls darfst du leider (rechtlich) nicht am Workshop teilnehmen. </p>
+                                <p>Wenn du noch <b>nicht 18 Jahre oder älter</b> bist musst du, spätestens nach der Anmeldung, deine Eltern eine <b>Einverständnis-Formular unterschreiben lassen</b>, dass du mit der Bestätigungsmail zugeschickt bekommst und das wieder zurückgeschickt werden muss. Andernfalls darfst du leider (rechtlich) nicht am Workshop teilnehmen. </p>
 
                             </AccordionItemPanel>
                         </AccordionItem>
@@ -202,11 +204,11 @@ function WorkshopInfo({ backLink }) {
                             </AccordionItemHeading>
                             <AccordionItemPanel>
                                 <p>
-                                    Mein Name ist Katrin Schulz, Bachelorstudentin an der Hochschule für Angewandte Wissenschaften Hamburg, im Bereich Kommunikationsdesign.
-                    <br />
-                        Mithilfe von toller Unterstützung (wie zum Beispiel das Programmieren dieser Webseite), habe ich diesen Intensiv-Workshop aufgebaut, der praktischer Teil meiner Bachelorarbeit (also der Abschlussarbeit meines Studiums) ist.
+                                    Mein Name ist Katrin Schulz, Bachelorstudentin an der Hochschule für Angewandte Wissenschaften Hamburg, im Bereich Kommunikationsdesign. <br />
                         <br />
-                        Die Arbeit beschäftigt sich im Theoretischen mit der <b>Haltung und den Methoden von Social Design</b>, einer relativ neueren Disziplin innerhalb des Designs.
+                        Mithilfe von toller Unterstützung (wie zum Beispiel das Programmieren dieser Webseite), habe ich diesen Intensiv-Workshop aufgebaut, der praktischer Teil meiner Bachelorarbeit (also der Abschlussarbeit meines Studiums) ist.  <br />
+                        <br />
+                        Die Arbeit beschäftigt sich im Theoretischen mit der <b>Haltung und den Methoden von Social Design</b>, einer relativ neueren Disziplin innerhalb des Designs.  <br />
                          <br />
                         Social Design klingt erstmal hochgestochen, ist im Grunde aber »Designen <b>mit</b> und <b>für</b> Gesellschaft». In vielen Social Design Projekten geht es darum, <b>kreative Lösungen</b> für <b>verzwickte Gesellschaftliche Probleme</b> zu finden. Dies findet meist in einem interdisziplinären Kreis von Leuten statt, die mit ihren unterschiedlichen Schwerpunkten an den Problemen arbeiten und Antworten finden.<br />
                                 </p>
