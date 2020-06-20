@@ -40,3 +40,12 @@ h1 {
 .chart-container {
     padding: 2em;
 }
+
+a#download {
+    padding: 1em;
+    background: #3b9aff;
+    display: inline-block;
+    margin: 1em;
+    color: white;
+    text-decoration: none;
+}

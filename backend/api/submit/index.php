@@ -1,5 +1,25 @@
 <?php
 
+function array_to_csv_download($array, $filename = "export.csv", $delimiter=";") {
+    // open raw memory as file so no temp files needed, you might run out of memory though
+    $f = fopen('php://memory', 'w');
+	fputs($f, $bom =( chr(0xEF) . chr(0xBB) . chr(0xBF) ));
+	fputcsv($f, array_keys($array[0]), $delimiter); 
+    // loop over the input array
+    foreach ($array as $line) { 
+        // generate csv lines from the inner arrays
+        fputcsv($f, $line, $delimiter); 
+    }
+    // reset the file pointer to the start of the file
+    fseek($f, 0);
+    // tell the browser it's going to be a csv file
+    header('Content-Type: application/csv');
+    // tell the browser we want to save it instead of displaying it
+    header('Content-Disposition: attachment; filename="'.$filename.'";');
+    // make php send the generated csv lines to the browser
+    fpassthru($f);
+}
+
 error_reporting(E_ALL);
 ini_set('display_errors', 'on');
 
@@ -10,7 +30,7 @@ ini_set('display_errors', 'on');
     $dotenv = Dotenv\Dotenv::createImmutable('../../');
     $dotenv->load();
 
-    $dsn = 'mysql:host='.getenv('DB_HOST').';dbname='.getenv('DB_NAME').';charset=utf8';
+    $dsn = 'mysql:host='.getenv('DB_HOST').';dbname='.getenv('DB_NAME').';charset=utf8mb4';
     $usr = getenv('DB_USER');
     $pwd = getenv('DB_PWD');
 
@@ -27,7 +47,12 @@ ini_set('display_errors', 'on');
         $result["success"] = true;
         $result["submissions"] = $data;
 
-        echo json_encode($result, JSON_UNESCAPED_UNICODE);
+		if (isset($_GET["csv"])) {
+			array_to_csv_download($data);
+		} else {
+			echo json_encode($result, JSON_UNESCAPED_UNICODE);
+		}
+        
 
     }
 
